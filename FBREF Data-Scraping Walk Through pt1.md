@@ -1,12 +1,14 @@
 ---
-title: 'arXiv-GPT: predicting Machine Learning abstracts'
-date: 28-09-2020
+title: 'FBREF Data Scraping Walkthough pt.1'
+date: 10-03-2022
 classes: wide
 ---
 
-*Code & notebook for this post can be found [here](https://github.com/steveaq/Webs-Scraping-for-Fooball-Data-/blob/main/FBREF%20League%20%26%20Team%20Data%20Exploration.ipynb). 
+Code & notebook for this post can be found [here](https://github.com/steveaq/Webs-Scraping-for-Fooball-Data-/blob/main/FBREF%20League%20%26%20Team%20Data%20Exploration.ipynb). 
 
 In my previous post, which you can find [here](), I outlined the current data landscape in the football analytics world and how one might go about aquiring those related metrics.
+
+![png](scraper.png)
 
 This post is a part of series of posts, where we will explore how to use web-scraping packages available in python to get football data as efficiently as possible.
 
@@ -74,7 +76,7 @@ from adjustText import adjust_text
 
 Let's load the data. For the sake of ease lets start with a squad page. I've gone with this as this page seems to have the most data in a table that is easy for the scrapper to access and retrieve the infomation from. I'm watching far more Serie A these days so the team I've gone with is Napoli. The fbref page used can be found [here](https://fbref.com/en/squads/d48ad4ff/Napoli-Stats).  
 
-![Napoli_Team](/Users/stephenahiabah/Desktop/GitHub/Webs-scarping-for-Fooball-Data-/Napoli Team.png)
+![Napoli_Team](Napoli_Team.png)
 
  The first function requires the URL of squad to be passed, in order to return a pandas dataframe with the high level per/90 team stats available on this page.
 
@@ -124,7 +126,204 @@ squad_stats_per_team.head()
 
 Now lets have a look a the output 
 
-+---+-----+----+--------+----+----+-------+------+---+---+---+---+---+---+---+------+------+------+------+------+-----+-----+-----+-----+------+------+------+------+------+---------------------+\n| 0 | ITA | DF | 28-224 | 29 | 29 | 2,531 | 28.1 | 1 | 2 | 1 | 0 | 0 | 3 | 0 | 0.04 | 0.07 | 0.11 | 0.04 | 0.11 | 1   | 1   | 2.5 | 3.5 | 0.04 | 0.09 | 0.12 | 0.04 | 0.12 | Giovanni Di Lorenzo |\n+---+-----+----+--------+----+----+-------+------+---+---+---+---+---+---+---+------+------+------+------+------+-----+-----+-----+-----+------+------+------+------+------+---------------------+\n| 1 | POR | DF | 30-293 | 26 | 26 | 2,304 | 25.6 | 0 | 3 | 0 | 0 | 0 | 7 | 0 | 0    | 0.12 | 0.12 | 0    | 0.12 | 1.3 | 1.3 | 2.6 | 4   | 0.05 | 0.1  | 0.15 | 0.05 | 0.15 | Mário Rui           |\n+---+-----+----+--------+----+----+-------+------+---+---+---+---+---+---+---+------+------+------+------+------+-----+-----+-----+-----+------+------+------+------+------+---------------------+\n| 2 | KVX | DF | 28-020 | 26 | 26 | 2,297 | 25.5 | 3 | 0 | 3 | 0 | 0 | 4 | 0 | 0.12 | 0    | 0.12 | 0.12 | 0.12 | 3.2 | 3.2 | 0.2 | 3.5 | 0.13 | 0.01 | 0.14 | 0.13 | 0.14 | Amir Rrahmani       |\n+---+-----+----+--------+----+----+-------+------+---+---+---+---+---+---+---+------+------+------+------+------+-----+-----+-----+-----+------+------+------+------+------+---------------------+\n| 3 | COL | GK | 33-197 | 25 | 25 | 2,250 | 25   | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0   | 0   | 0    | 0    | 0    | 0    | 0    | David Ospina        |\n+---+-----+----+--------+----+----+-------+------+---+---+---+---+---+---+---+------+------+------+------+------+-----+-----+-----+-----+------+------+------+------+------+---------------------+\n| 4 | POL | MF | 27-300 | 27 | 23 | 1,742 | 19.4 | 5 | 5 | 5 | 0 | 0 | 1 | 0 | 0.26 | 0.26 | 0.52 | 0.26 | 0.52 | 2.8 | 2.8 | 2.9 | 5.7 | 0.14 | 0.15 | 0.3  | 0.14 | 0.3  | Piotr Zieliński     |\n+---+-----+----+--------+----+----+-------+------+---+---+---+---+---+---+---+------+------+------+------+------+-----+-----+-----+-----+------+------+------+------+------+---------------------+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Nation</th>
+      <th>Pos</th>
+      <th>Age</th>
+      <th>MP</th>
+      <th>Starts</th>
+      <th>Min</th>
+      <th>90s</th>
+      <th>Gls</th>
+      <th>Ast</th>
+      <th>G-PK</th>
+      <th>PK</th>
+      <th>PKatt</th>
+      <th>CrdY</th>
+      <th>CrdR</th>
+      <th>Gls</th>
+      <th>Ast</th>
+      <th>G+A</th>
+      <th>G-PK</th>
+      <th>G+A-PK</th>
+      <th>xG</th>
+      <th>npxG</th>
+      <th>xA</th>
+      <th>npxG+xA</th>
+      <th>xG</th>
+      <th>xA</th>
+      <th>xG+xA</th>
+      <th>npxG</th>
+      <th>npxG+xA</th>
+      <th>Player</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ITA</td>
+      <td>DF</td>
+      <td>28-224</td>
+      <td>29</td>
+      <td>29</td>
+      <td>2,531</td>
+      <td>28.1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0.04</td>
+      <td>0.07</td>
+      <td>0.11</td>
+      <td>0.04</td>
+      <td>0.11</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>3.5</td>
+      <td>0.04</td>
+      <td>0.09</td>
+      <td>0.12</td>
+      <td>0.04</td>
+      <td>0.12</td>
+      <td>Giovanni Di Lorenzo</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>POR</td>
+      <td>DF</td>
+      <td>30-293</td>
+      <td>26</td>
+      <td>26</td>
+      <td>2,304</td>
+      <td>25.6</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>7</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0.12</td>
+      <td>0.12</td>
+      <td>0.00</td>
+      <td>0.12</td>
+      <td>1.3</td>
+      <td>1.3</td>
+      <td>2.6</td>
+      <td>4.0</td>
+      <td>0.05</td>
+      <td>0.10</td>
+      <td>0.15</td>
+      <td>0.05</td>
+      <td>0.15</td>
+      <td>Mário Rui</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>KVX</td>
+      <td>DF</td>
+      <td>28-020</td>
+      <td>26</td>
+      <td>26</td>
+      <td>2,297</td>
+      <td>25.5</td>
+      <td>3</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>0</td>
+      <td>0.12</td>
+      <td>0.00</td>
+      <td>0.12</td>
+      <td>0.12</td>
+      <td>0.12</td>
+      <td>3.2</td>
+      <td>3.2</td>
+      <td>0.2</td>
+      <td>3.5</td>
+      <td>0.13</td>
+      <td>0.01</td>
+      <td>0.14</td>
+      <td>0.13</td>
+      <td>0.14</td>
+      <td>Amir Rrahmani</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>COL</td>
+      <td>GK</td>
+      <td>33-197</td>
+      <td>25</td>
+      <td>25</td>
+      <td>2,250</td>
+      <td>25.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>David Ospina</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>POL</td>
+      <td>MF</td>
+      <td>27-300</td>
+      <td>27</td>
+      <td>23</td>
+      <td>1,742</td>
+      <td>19.4</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0.26</td>
+      <td>0.26</td>
+      <td>0.52</td>
+      <td>0.26</td>
+      <td>0.52</td>
+      <td>2.8</td>
+      <td>2.8</td>
+      <td>2.9</td>
+      <td>5.7</td>
+      <td>0.14</td>
+      <td>0.15</td>
+      <td>0.30</td>
+      <td>0.14</td>
+      <td>0.30</td>
+      <td>Piotr Zieliński</td>
+    </tr>
+  </tbody>
+</table>
 
 
 Okay so we've got a table with some good data. There 29 features availble including all of the match related stats in per 90 format. We even have ages and squad time. [Abhishek Sharma](https://sharmaabhishekk.github.io/projects/) provided some inspiration with his [notebook](https://sharmaabhishekk.github.io/mpl-footy/main/2021/08/09/squad-age-profile.html), where he creates a beautiful age-squad profile map. 
@@ -237,7 +436,121 @@ league_results = league_results.loc[(league_results['captain'] != '') & (league_
 league_results 
 ```
 
-'+---+-----+-------+---------+---+-----------+-------+-----+--------+----------------------+---+------+-----------------+-----+----+---+\n| 0 | 0.5 | 20:45 | Serie A | 2 | Venezia   | 4-3-3 | Sun | 20,000 | Gianluca Aureliano   | W | Home | Lorenzo Insigne | 2.3 | 56 | 0 |\n+---+-----+-------+---------+---+-----------+-------+-----+--------+----------------------+---+------+-----------------+-----+----+---+\n| 1 | 0.6 | 18:30 | Serie A | 2 | Genoa     | 4-3-3 | Sun | 20,000 | Marco Di Bello       | W | Away | Lorenzo Insigne | 1.1 | 61 | 1 |\n+---+-----+-------+---------+---+-----------+-------+-----+--------+----------------------+---+------+-----------------+-----+----+---+\n| 2 | 1   | 18:00 | Serie A | 2 | Juventus  | 4-3-3 | Sat | 23,500 | Massimiliano Irrati  | W | Home | Lorenzo Insigne | 2.1 | 67 | 1 |\n+---+-----+-------+---------+---+-----------+-------+-----+--------+----------------------+---+------+-----------------+-----+----+---+\n| 4 | 0.3 | 20:45 | Serie A | 4 | Udinese   | 4-3-3 | Mon | 11,484 | Gianluca Manganiello | W | Away | Lorenzo Insigne | 2.4 | 63 | 0 |\n+---+-----+-------+---------+---+-----------+-------+-----+--------+----------------------+---+------+-----------------+-----+----+---+\n| 5 | 0.6 | 18:30 | Serie A | 4 | Sampdoria | 4-3-3 | Thu | 4,596  | Paolo Valeri         | W | Away | Lorenzo Insigne | 2.2 | 52 | 0 |\n+---+-----+-------+---------+---+-----------+-------+-----+--------+----------------------+---+------+-----------------+-----+----+---+'
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>xg_against</th>
+      <th>time</th>
+      <th>comp</th>
+      <th>goals_for</th>
+      <th>opponent</th>
+      <th>formation</th>
+      <th>dayofweek</th>
+      <th>attendance</th>
+      <th>referee</th>
+      <th>result</th>
+      <th>venue</th>
+      <th>captain</th>
+      <th>xg_for</th>
+      <th>possession</th>
+      <th>goals_against</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.5</td>
+      <td>20:45</td>
+      <td>Serie A</td>
+      <td>2</td>
+      <td>Venezia</td>
+      <td>4-3-3</td>
+      <td>Sun</td>
+      <td>20,000</td>
+      <td>Gianluca Aureliano</td>
+      <td>W</td>
+      <td>Home</td>
+      <td>Lorenzo Insigne</td>
+      <td>2.3</td>
+      <td>56</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.6</td>
+      <td>18:30</td>
+      <td>Serie A</td>
+      <td>2</td>
+      <td>Genoa</td>
+      <td>4-3-3</td>
+      <td>Sun</td>
+      <td>20,000</td>
+      <td>Marco Di Bello</td>
+      <td>W</td>
+      <td>Away</td>
+      <td>Lorenzo Insigne</td>
+      <td>1.1</td>
+      <td>61</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1.0</td>
+      <td>18:00</td>
+      <td>Serie A</td>
+      <td>2</td>
+      <td>Juventus</td>
+      <td>4-3-3</td>
+      <td>Sat</td>
+      <td>23,500</td>
+      <td>Massimiliano Irrati</td>
+      <td>W</td>
+      <td>Home</td>
+      <td>Lorenzo Insigne</td>
+      <td>2.1</td>
+      <td>67</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.3</td>
+      <td>20:45</td>
+      <td>Serie A</td>
+      <td>4</td>
+      <td>Udinese</td>
+      <td>4-3-3</td>
+      <td>Mon</td>
+      <td>11,484</td>
+      <td>Gianluca Manganiello</td>
+      <td>W</td>
+      <td>Away</td>
+      <td>Lorenzo Insigne</td>
+      <td>2.4</td>
+      <td>63</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.6</td>
+      <td>18:30</td>
+      <td>Serie A</td>
+      <td>4</td>
+      <td>Sampdoria</td>
+      <td>4-3-3</td>
+      <td>Thu</td>
+      <td>4,596</td>
+      <td>Paolo Valeri</td>
+      <td>W</td>
+      <td>Away</td>
+      <td>Lorenzo Insigne</td>
+      <td>2.2</td>
+      <td>52</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
 
 
 
