@@ -74,7 +74,7 @@ from adjustText import adjust_text
 
 Let's load the data. For the sake of ease lets start with a squad page. I've gone with this as this page seems to have the most data in a table that is easy for the scrapper to access and retrieve the infomation from. I'm watching far more Serie A these days so the team I've gone with is Napoli. The fbref page used can be found [here](https://fbref.com/en/squads/d48ad4ff/Napoli-Stats).  
 
-![png](Napoli Team.png)
+![Napoli_Team](/Users/stephenahiabah/Desktop/GitHub/Webs-scarping-for-Fooball-Data-/Napoli Team.png)
 
  The first function requires the URL of squad to be passed, in order to return a pandas dataframe with the high level per/90 team stats available on this page.
 
@@ -109,7 +109,8 @@ def generate_squadlist(url):
     df.set_index("Player")
 ```
 
-I like putting these codes in to functions & loops, because, their repeatable and they do boring tasks so I dont have to. The above functions works on any page with this template so effectly any teams stats page will work with this function. 
+
+The above functions works on any page with this template so effectly any teams stats page will work with this function. 
 
 I want to be able to get the team name and store it for later. As it happens the URLs for FBREF follow a similar pattern so we can slice the list to get the name and save it in the team name variable.
 
@@ -123,16 +124,12 @@ squad_stats_per_team.head()
 
 Now lets have a look a the output 
 
--  ---  --  ------  --  --  -----  ----  -  -  -  -  -  -  -  ----  ----  ----  ----  ----  ---  ---  ---  ---  ----  ----  ----  ----  ----  -------------------
-0  ITA  DF  28-224  29  29  2,531  28.1  1  2  1  0  0  3  0  0.04  0.07  0.11  0.04  0.11  1    1    2.5  3.5  0.04  0.09  0.12  0.04  0.12  Giovanni Di Lorenzo
-1  POR  DF  30-293  26  26  2,304  25.6  0  3  0  0  0  7  0  0     0.12  0.12  0     0.12  1.3  1.3  2.6  4    0.05  0.1   0.15  0.05  0.15  Mário Rui
-2  KVX  DF  28-020  26  26  2,297  25.5  3  0  3  0  0  4  0  0.12  0     0.12  0.12  0.12  3.2  3.2  0.2  3.5  0.13  0.01  0.14  0.13  0.14  Amir Rrahmani
-3  COL  GK  33-197  25  25  2,250  25    0  0  0  0  0  0  0  0     0     0     0     0     0    0    0    0    0     0     0     0     0     David Ospina
-4  POL  MF  27-300  27  23  1,742  19.4  5  5  5  0  0  1  0  0.26  0.26  0.52  0.26  0.52  2.8  2.8  2.9  5.7  0.14  0.15  0.3   0.14  0.3   Piotr Zieliński
--  ---  --  ------  --  --  -----  ----  -  -  -  -  -  -  -  ----  ----  ----  ----  ----  ---  ---  ---  ---  ----  ----  ----  ----  ----  -------------------
+'-  ---  --  ------  --  --  -----  ----  -  -  -  -  -  -  -  ----  ----  ----  ----  ----  ---  ---  ---  ---  ----  ----  ----  ----  ----  -------------------\n0  ITA  DF  28-224  29  29  2,531  28.1  1  2  1  0  0  3  0  0.04  0.07  0.11  0.04  0.11  1    1    2.5  3.5  0.04  0.09  0.12  0.04  0.12  Giovanni Di Lorenzo\n1  POR  DF  30-293  26  26  2,304  25.6  0  3  0  0  0  7  0  0     0.12  0.12  0     0.12  1.3  1.3  2.6  4    0.05  0.1   0.15  0.05  0.15  Mário Rui\n2  KVX  DF  28-020  26  26  2,297  25.5  3  0  3  0  0  4  0  0.12  0     0.12  0.12  0.12  3.2  3.2  0.2  3.5  0.13  0.01  0.14  0.13  0.14  Amir Rrahmani\n3  COL  GK  33-197  25  25  2,250  25    0  0  0  0  0  0  0  0     0     0     0     0     0    0    0    0    0     0     0     0     0     David Ospina\n4  POL  MF  27-300  27  23  1,742  19.4  5  5  5  0  0  1  0  0.26  0.26  0.52  0.26  0.52  2.8  2.8  2.9  5.7  0.14  0.15  0.3   0.14  0.3   Piotr Zieliński\n-  ---  --  ------  --  --  -----  ----  -  -  -  -  -  -  -  ----  ----  ----  ----  ----  ---  ---  ---  ---  ----  ----  ----  ----  ----  -------------------'
 
 
-Okay so we've got a table with some good data, 29 features availble, all of the match related stats are in per 90 format and we even have ages and squad time. [Abhishek Sharma](https://sharmaabhishekk.github.io/projects/) provided some inspiration with his [notebook](https://sharmaabhishekk.github.io/mpl-footy/main/2021/08/09/squad-age-profile.html), where he creates a beautiful age-squad profile map. Lets do similar but use the dataset we have loaded in and put it in to a function.
+Okay so we've got a table with some good data. There 29 features availble including all of the match related stats in per 90 format. We even have ages and squad time. [Abhishek Sharma](https://sharmaabhishekk.github.io/projects/) provided some inspiration with his [notebook](https://sharmaabhishekk.github.io/mpl-footy/main/2021/08/09/squad-age-profile.html), where he creates a beautiful age-squad profile map. 
+
+Lets do similar but use the dataset we have loaded in and put it in to a function.
 
 
 ```python
@@ -186,16 +183,20 @@ def squad_age_profile_chart(df, team_name):
 ```
 
 
-![png](Napoli Age-Squad Chart.png)
+![Napoli_Age_Squad_Chart](Users/stephenahiabah/Desktop/GitHub/Webs-scarping-for-Fooball-Data-/Napoli Age-Squad Chart.png)
 
 
 I'm an arsenal fan so ages curves are all the rage right now and I can safely say, this Napoli squad does not look future ready. I've gone with the peak Age range of 24 to 28.5 as this gives us just the right catchment for all players at elite level. 
+
 As we can see there's a troubling distribution here. Napoli have a hight proprtion of players just about to exit their peak or past their peak with a siginifant share of league minutes. From just an eye ball I can see regular starters like Koulibaly, Di Lorenzo very much on the 'wrong side of 30'. Obviously there are limitations, a few are:
+
 - We need to get the age profile of the league for a true comparison
 - Not all peaks are equal, goalkeepers, defender have much later peaks than forward players 
 - This doesnt account for injury records to clearly explain the factors effecting share of minutes.
 
-A good start but lets go further. Lets see if we can take some fixture data from another table in FBREF.
+A good start but lets go further. 
+
+Lets see if we can take some fixture data from another table in FBREF.
 
 ![png](Napoli Fixture.png)
 
@@ -236,14 +237,7 @@ league_results = league_results.loc[(league_results['captain'] != '') & (league_
 league_results 
 ```
 
--  ---  -----  -------  -  ---------  -----  ---  ------  --------------------  -  ----  ---------------  ---  --  -
-0  0.5  20:45  Serie A  2  Venezia    4-3-3  Sun  20,000  Gianluca Aureliano    W  Home  Lorenzo Insigne  2.3  56  0
-1  0.6  18:30  Serie A  2  Genoa      4-3-3  Sun  20,000  Marco Di Bello        W  Away  Lorenzo Insigne  1.1  61  1
-2  1    18:00  Serie A  2  Juventus   4-3-3  Sat  23,500  Massimiliano Irrati   W  Home  Lorenzo Insigne  2.1  67  1
-4  0.3  20:45  Serie A  4  Udinese    4-3-3  Mon  11,484  Gianluca Manganiello  W  Away  Lorenzo Insigne  2.4  63  0
-5  0.6  18:30  Serie A  4  Sampdoria  4-3-3  Thu  4,596   Paolo Valeri          W  Away  Lorenzo Insigne  2.2  52  0
--  ---  -----  -------  -  ---------  -----  ---  ------  --------------------  -  ----  ---------------  ---  --  -
-
+'-  ---  -----  -------  -  ---------  -----  ---  ------  --------------------  -  ----  ---------------  ---  --  -\n0  0.5  20:45  Serie A  2  Venezia    4-3-3  Sun  20,000  Gianluca Aureliano    W  Home  Lorenzo Insigne  2.3  56  0\n1  0.6  18:30  Serie A  2  Genoa      4-3-3  Sun  20,000  Marco Di Bello        W  Away  Lorenzo Insigne  1.1  61  1\n2  1    18:00  Serie A  2  Juventus   4-3-3  Sat  23,500  Massimiliano Irrati   W  Home  Lorenzo Insigne  2.1  67  1\n4  0.3  20:45  Serie A  4  Udinese    4-3-3  Mon  11,484  Gianluca Manganiello  W  Away  Lorenzo Insigne  2.4  63  0\n5  0.6  18:30  Serie A  4  Sampdoria  4-3-3  Thu  4,596   Paolo Valeri          W  Away  Lorenzo Insigne  2.2  52  0\n-  ---  -----  -------  -  ---------  -----  ---  ------  --------------------  -  ----  ---------------  ---  --  -'
 
 
 
