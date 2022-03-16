@@ -328,13 +328,15 @@ Now lets have a look a the output
 
 Okay so we've got a table with some good data. There 29 features availble including all of the match related stats in per 90 format. We even have ages and squad time. [Abhishek Sharma](https://sharmaabhishekk.github.io/projects/) provided some inspiration with his [notebook](https://sharmaabhishekk.github.io/mpl-footy/main/2021/08/09/squad-age-profile.html), where he creates a beautiful age-squad profile map. 
 
-Lets do similar but use the dataset we have loaded in and put it in to a function.
+This particular visualisation really helps illustrate the age distrubtions of a squad and could be used to supplement analysis regarding player performance, squad importance and possibly even tranfer planning. 
+
+Lets do something similar but use the dataset we have loaded in and put it in to a function to have a look at Napoli's squad age to share of minutes played profile.
 
 
 ```python
 def squad_age_profile_chart(df, team_name):
         df[["90s"]] = df[["90s"]].apply(pd.to_numeric)        
-        df["Min_pct"] = 100*df["90s"]/38 ##number of matches in a Serie A season
+        df["Min_pct"] = 100*df["90s"]/len(df) ##number of matches played so far this season
         df = df.dropna(subset=["Age", "Min_pct"])
         df = df.loc[:len(df)-1, :]
         df[["Player", "Pos", "age_new", "Min_pct"]].head()
@@ -380,20 +382,19 @@ def squad_age_profile_chart(df, team_name):
                         pe.Normal()])
 
 ```
-
+I'm an arsenal fan so ages curves are all the rage right now and I can safely say, this Napoli squad does not look future ready. I've gone with the peak Age range of 25 to 27 as this gives us just the right catchment for all players at elite level as argued by Seife Dendir in this article in the [Journal of Sports Analytics 2 (2016) 89–105](https://www.researchgate.net/publication/309367548_When_do_soccer_players_peak_A_note).
 
 ![Napoli_Age_Squad_Chart](Napoli_Age_Squad_Chart.png)
-
-
-I'm an arsenal fan so ages curves are all the rage right now and I can safely say, this Napoli squad does not look future ready. I've gone with the peak Age range of 24 to 28.5 as this gives us just the right catchment for all players at elite level. 
 
 As we can see there's a troubling distribution here. Napoli have a hight proprtion of players just about to exit their peak or past their peak with a siginifant share of league minutes. From just an eye ball I can see regular starters like Koulibaly, Di Lorenzo very much on the 'wrong side of 30'. Obviously there are limitations, a few are:
 
 - We need to get the age profile of the league for a true comparison
-- Not all peaks are equal, goalkeepers, defender have much later peaks than forward players 
+- We are not including longetivity as a variable. Wherein some players simply just last longer at the elite level than others
+- Not all peaks are equal, goalkeepers & defenders have much later peaks than forward players 
 - This doesnt account for injury records to clearly explain the factors effecting share of minutes.
 
-A good start but lets go further. 
+A good start. We have managed to scrape data from FBREF, cleaned up the data we have gathered and then done some interesting data visualisations on top of this.
+As mentioned previously, FBREF has extensive data so lets take a look at scraping another mini site. 
 
 Lets see if we can take some fixture data from another table in FBREF.
 
@@ -427,7 +428,7 @@ def team_fixture_data(x):
     df = pd.DataFrame.from_dict(pre_df)
     return df 
 ```
-To clean up the table slightly were going to select only league games and games that have been played. I used the captain column as the logic to filter as if there's no captain the game has not been played yet.
+To clean up the table slightly, we're going to select only the domestic league fixtures and fixtures that have already been played.
 
 ```python
 
@@ -435,7 +436,7 @@ league_results = team_fixture_data("https://fbref.com/en/squads/d48ad4ff/2021-20
 league_results = league_results.loc[(league_results['captain'] != '') & (league_results['comp'] == 'Serie A')]
 league_results 
 ```
-The team fixture dataset is now cleaner and has the data we need.
+Resulting Table will now look like this: 
 
 <table border="1" class="dataframe">
   <thead>
@@ -552,6 +553,8 @@ The team fixture dataset is now cleaner and has the data we need.
   </tbody>
 </table>
 
+
+Now lets investigate Napoli's league performance data. 
 
 ```python
 def generate_xg_analysis_chart(df):
@@ -789,7 +792,7 @@ for index, row in df.iterrows():
     ab = AnnotationBbox(getImage(os.path.join("team_logos/"+row["path"])), (row["ppg_form"], row["xg_diff_per90"]), frameon=False)
     ax.add_artist(ab)
 ```
-[ppg_vs_xdg_1](ppg_vs_xdg_1.png)
+![ppg_vs_xdg_1](ppg_vs_xdg_1.png)
 ```python
 # Set font and background colour
 bgcol = '#fafafa'
@@ -842,7 +845,7 @@ fig.text(.325,.17,'Avg. Last 5 ppg', size=6, color='#c2c1c0',rotation=90)
 plt.savefig('xGChart.png', dpi=1200, bbox_inches = "tight")
 ```
 
-[ppg_vs_xdg_2](ppg_vs_xdg_2.png)
+![ppg_vs_xdg_2](ppg_vs_xdg_2.png)
 
 
 ## Conclusion
