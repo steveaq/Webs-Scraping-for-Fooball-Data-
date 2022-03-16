@@ -435,6 +435,7 @@ league_results = team_fixture_data("https://fbref.com/en/squads/d48ad4ff/2021-20
 league_results = league_results.loc[(league_results['captain'] != '') & (league_results['comp'] == 'Serie A')]
 league_results 
 ```
+The team fixture dataset is now cleaner and has the data we need.
 
 <table border="1" class="dataframe">
   <thead>
@@ -552,6 +553,296 @@ league_results
 </table>
 
 
+```python
+def generate_xg_analysis_chart(df):
+        window = 5
+        gd_color = "green"
+        xgd_color = "blue"
+
+        df[["goals_for","xg_for","xg_against","goals_against"]] = df[["goals_for","xg_for","xg_against","goals_against"]].apply(pd.to_numeric)
+
+        df["GD"] = df["goals_for"] - df["goals_against"]
+        df["xGD"] = df["xg_for"] - df["xg_against"]
+
+        gd_rolling = df["GD"].rolling(window).mean().values[window:]
+        xgd_rolling = df["xGD"].rolling(window).mean().values[window:]
+
+        plt.rcParams['font.family'] = 'Palatino Linotype' ##set global font
+        fig, ax = plt.subplots(figsize=(12, 8))
+
+        ax.plot(gd_rolling, color=gd_color,  linestyle="-.", marker="o",  mfc=gd_color, mec="white", markersize=8, mew=0.4, zorder=10)  ##goal-difference
+        ax.plot(xgd_rolling, color=xgd_color,  linestyle="-.", marker = "o", mfc=xgd_color, mec="white", markersize=8, mew=0.4, zorder=10) ##expected goals difference
+
+        ax.fill_between(x=range(len(gd_rolling)), y1=gd_rolling, y2=xgd_rolling, where = gd_rolling>xgd_rolling, 
+                        alpha=0.2, color=gd_color, interpolate=True, zorder=5) ##shade the areas in between
+        ax.fill_between(x=range(len(gd_rolling)), y1=gd_rolling, y2=xgd_rolling, where = gd_rolling<=xgd_rolling, 
+                        alpha=0.2, color=xgd_color, interpolate=True, zorder=5)
+
+        ax.grid(linestyle="dashed", lw=0.7, alpha=0.1, zorder=1) ## a faint grid
+        for spine in ["top", "right"]:
+                ax.spines[spine].set_visible(False)  
+        ax.set_position([0.08, 0.08, 0.82, 0.78]) ## make space for the title on top of the axes
+
+        ## labels, titles and subtitles
+        ax.set(xlabel=f"{window} match rolling mean", xlim=(-1, len(df)-window))     
+        ax.xaxis.label.set(fontsize=12, fontweight='bold')    
+
+        fig.text(x=0.08, y=0.92, s=f"{team_name} | Performance Trend", 
+                ha='left', fontsize=24, fontweight='book', 
+                path_effects=[pe.Stroke(linewidth=3, foreground='0.15'),
+                        pe.Normal()])   
+
+        fig_text(x=0.08, y=0.90, ha='left',
+                fontsize=18, fontweight='book',
+                s='2020-21 | <Goal Difference> vs <Expected Goal Difference>',
+                path_effects=[pe.Stroke(linewidth=3, foreground='0.15'),
+                        pe.Normal()],
+                highlight_textprops=[{"color": gd_color},
+                                        {"color": xgd_color}])
+```
+
+
+![Napoli_GD_vs_xGD](GD_vs_xGD.png)
+
+```python
+def generate_league_data(x):
+    url = x
+    page = urlopen(url).read()
+    soup = BeautifulSoup(page)
+    count = 0 
+    table = soup.find("tbody")
+
+    pre_df = dict()
+    features_wanted =  {"squad" , "games","wins","draws","losses", "goals_for","goals_against", "points", "xg_for","xg_against","xg_diff","attendance","xg_diff_per90", "last_5"} #add more features here!!
+    rows = table.find_all('tr')
+    for row in rows:
+        for f in features_wanted:
+            if (row.find('th', {"scope":"row"}) != None) & (row.find("td",{"data-stat": f}) != None):
+                cell = row.find("td",{"data-stat": f})
+                a = cell.text.strip().encode()
+                text=a.decode("utf-8")
+                if f in pre_df:
+                    pre_df[f].append(text)
+                else:
+                    pre_df[f]=[text]
+                
+    df = pd.DataFrame.from_dict(pre_df)
+    df["games"] = pd.to_numeric(df["games"])
+    df["xg_diff_per90"] = pd.to_numeric(df["xg_diff_per90"])
+    df["minutes_played"] = df["games"] *90
+    return(df)
+```
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>xg_diff_per90</th>
+      <th>xg_against</th>
+      <th>squad</th>
+      <th>wins</th>
+      <th>games</th>
+      <th>losses</th>
+      <th>goals_for</th>
+      <th>last_5</th>
+      <th>xg_diff</th>
+      <th>xg_for</th>
+      <th>points</th>
+      <th>goals_against</th>
+      <th>draws</th>
+      <th>minutes_played</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.59</td>
+      <td>28.4</td>
+      <td>Milan</td>
+      <td>19</td>
+      <td>29</td>
+      <td>4</td>
+      <td>55</td>
+      <td>W D D W W</td>
+      <td>+17.0</td>
+      <td>45.5</td>
+      <td>63</td>
+      <td>29</td>
+      <td>6</td>
+      <td>2610</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.83</td>
+      <td>21.7</td>
+      <td>Napoli</td>
+      <td>18</td>
+      <td>29</td>
+      <td>5</td>
+      <td>51</td>
+      <td>D D W L W</td>
+      <td>+24.1</td>
+      <td>45.8</td>
+      <td>60</td>
+      <td>21</td>
+      <td>6</td>
+      <td>2610</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1.05</td>
+      <td>29.7</td>
+      <td>Inter</td>
+      <td>17</td>
+      <td>28</td>
+      <td>3</td>
+      <td>61</td>
+      <td>D L D W D</td>
+      <td>+29.4</td>
+      <td>59.1</td>
+      <td>59</td>
+      <td>23</td>
+      <td>8</td>
+      <td>2520</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.38</td>
+      <td>27.9</td>
+      <td>Juventus</td>
+      <td>16</td>
+      <td>29</td>
+      <td>5</td>
+      <td>45</td>
+      <td>D D W W W</td>
+      <td>+10.9</td>
+      <td>38.8</td>
+      <td>56</td>
+      <td>26</td>
+      <td>8</td>
+      <td>2610</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.22</td>
+      <td>35.6</td>
+      <td>Lazio</td>
+      <td>14</td>
+      <td>29</td>
+      <td>8</td>
+      <td>58</td>
+      <td>W D L W W</td>
+      <td>+6.5</td>
+      <td>42.1</td>
+      <td>49</td>
+      <td>42</td>
+      <td>7</td>
+      <td>2610</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+```python
+df = generate_league_data("https://fbref.com/en/comps/9/Premier-League-Stats")
+df['path'] = df["squad"] + '.png'
+df[["squad","xg_for","xg_against", "path"]]
+```
+
+```python
+def p90_Calculator(variable_value, minutes_played):
+    
+    variable_value = pd.to_numeric(variable_value)
+    
+    ninety_minute_periods = minutes_played/90
+    
+    p90_value = variable_value/ninety_minute_periods
+    
+    return p90_value
+
+def form_ppg_calc(variable_value):
+    wins = variable_value.count("W")
+    draws = variable_value.count("D")
+    losses = variable_value.count("L")
+    points = (wins*3) + (draws)
+    ppg = points/5
+    return ppg
+
+def getImage(path):
+    return OffsetImage(plt.imread(path), zoom=.05, alpha = 1)
+```
+
+```python
+df['xG_p90'] = df.apply(lambda x: p90_Calculator(x['xg_for'], x['minutes_played']), axis=1)
+df['xGA_p90'] = df.apply(lambda x: p90_Calculator(x['xg_against'], x['minutes_played']), axis=1)
+df['ppg_form'] = df.apply(lambda x: form_ppg_calc(x['last_5']), axis=1)
+```
+```python
+import matplotlib.pyplot as plt
+from matplotlib.offsetbox import OffsetImage, AnnotationBbox
+fig, ax = plt.subplots(figsize=(6, 4), dpi=120)
+ax.scatter(df["ppg_form"], df["xg_diff_per90"])
+
+for index, row in df.iterrows():
+    ab = AnnotationBbox(getImage(os.path.join("team_logos/"+row["path"])), (row["ppg_form"], row["xg_diff_per90"]), frameon=False)
+    ax.add_artist(ab)
+```
+[ppg_vs_xdg_1](ppg_vs_xdg_1.png)
+```python
+# Set font and background colour
+bgcol = '#fafafa'
+
+# Create initial plot
+fig, ax = plt.subplots(figsize=(6, 4), dpi=120)
+fig.set_facecolor(bgcol)
+ax.set_facecolor(bgcol)
+ax.scatter(df['ppg_form'], df['xg_diff_per90'], c=bgcol)
+
+# Change plot spines
+ax.spines['right'].set_visible(False)
+ax.spines['top'].set_visible(False)
+ax.spines['left'].set_color('#ccc8c8')
+ax.spines['bottom'].set_color('#ccc8c8')
+
+# Change ticks
+plt.tick_params(axis='x', labelsize=6, color='#ccc8c8')
+plt.tick_params(axis='y', labelsize=6, color='#ccc8c8')
+
+# Plot badges
+def getImage(path):
+    return OffsetImage(plt.imread(path), zoom=.05, alpha = 1)
+
+for index, row in df.iterrows():
+    ab = AnnotationBbox(getImage(os.path.join("team_logos/"+row["path"])), (row['ppg_form'], row['xg_diff_per90']), frameon=False)
+    ax.add_artist(ab)
+
+# Add average lines
+plt.hlines(df['xg_diff_per90'].mean(), df['ppg_form'].min(), df['ppg_form'].max(), color='#c2c1c0')
+plt.vlines(df['ppg_form'].mean(), df['xg_diff_per90'].min(), df['xg_diff_per90'].max(), color='#c2c1c0')
+ax.axvspan(2.0, 3,0, alpha=0.1, color='green',label= "In Form")
+ax.axvspan(0.9, 1,2, alpha=0.1, color='yellow',label= "Mediorcre")
+ax.axvspan(0.0, 0.5, alpha=0.1, color='red',label= "relegation on speed dail")
+
+# Text
+
+## Title & comment
+fig.text(.15,.98,'Last 5 ppg vs xG Difference per 90',size=18)
+
+## Avg line explanation
+fig.text(.06,.14,'xG Difference per 90', size=9, color='#575654',rotation=90)
+fig.text(.12,0.05,'Last 5 ppg', size=9, color='#575654')
+
+## Axes titles
+fig.text(.76,.535,'Avg. xG Difference per 90', size=6, color='#c2c1c0')
+fig.text(.325,.17,'Avg. Last 5 ppg', size=6, color='#c2c1c0',rotation=90)
+
+## Save plot
+plt.savefig('xGChart.png', dpi=1200, bbox_inches = "tight")
+```
+
+[ppg_vs_xdg_2](ppg_vs_xdg_2.png)
 
 
 ## Conclusion
