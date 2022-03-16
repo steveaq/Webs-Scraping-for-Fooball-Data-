@@ -124,7 +124,7 @@ squad_stats_per_team.head()
 
 Now lets have a look a the output 
 
-'-  ---  --  ------  --  --  -----  ----  -  -  -  -  -  -  -  ----  ----  ----  ----  ----  ---  ---  ---  ---  ----  ----  ----  ----  ----  -------------------\n0  ITA  DF  28-224  29  29  2,531  28.1  1  2  1  0  0  3  0  0.04  0.07  0.11  0.04  0.11  1    1    2.5  3.5  0.04  0.09  0.12  0.04  0.12  Giovanni Di Lorenzo\n1  POR  DF  30-293  26  26  2,304  25.6  0  3  0  0  0  7  0  0     0.12  0.12  0     0.12  1.3  1.3  2.6  4    0.05  0.1   0.15  0.05  0.15  Mário Rui\n2  KVX  DF  28-020  26  26  2,297  25.5  3  0  3  0  0  4  0  0.12  0     0.12  0.12  0.12  3.2  3.2  0.2  3.5  0.13  0.01  0.14  0.13  0.14  Amir Rrahmani\n3  COL  GK  33-197  25  25  2,250  25    0  0  0  0  0  0  0  0     0     0     0     0     0    0    0    0    0     0     0     0     0     David Ospina\n4  POL  MF  27-300  27  23  1,742  19.4  5  5  5  0  0  1  0  0.26  0.26  0.52  0.26  0.52  2.8  2.8  2.9  5.7  0.14  0.15  0.3   0.14  0.3   Piotr Zieliński\n-  ---  --  ------  --  --  -----  ----  -  -  -  -  -  -  -  ----  ----  ----  ----  ----  ---  ---  ---  ---  ----  ----  ----  ----  ----  -------------------'
++---+-----+----+--------+----+----+-------+------+---+---+---+---+---+---+---+------+------+------+------+------+-----+-----+-----+-----+------+------+------+------+------+---------------------+\n| 0 | ITA | DF | 28-224 | 29 | 29 | 2,531 | 28.1 | 1 | 2 | 1 | 0 | 0 | 3 | 0 | 0.04 | 0.07 | 0.11 | 0.04 | 0.11 | 1   | 1   | 2.5 | 3.5 | 0.04 | 0.09 | 0.12 | 0.04 | 0.12 | Giovanni Di Lorenzo |\n+---+-----+----+--------+----+----+-------+------+---+---+---+---+---+---+---+------+------+------+------+------+-----+-----+-----+-----+------+------+------+------+------+---------------------+\n| 1 | POR | DF | 30-293 | 26 | 26 | 2,304 | 25.6 | 0 | 3 | 0 | 0 | 0 | 7 | 0 | 0    | 0.12 | 0.12 | 0    | 0.12 | 1.3 | 1.3 | 2.6 | 4   | 0.05 | 0.1  | 0.15 | 0.05 | 0.15 | Mário Rui           |\n+---+-----+----+--------+----+----+-------+------+---+---+---+---+---+---+---+------+------+------+------+------+-----+-----+-----+-----+------+------+------+------+------+---------------------+\n| 2 | KVX | DF | 28-020 | 26 | 26 | 2,297 | 25.5 | 3 | 0 | 3 | 0 | 0 | 4 | 0 | 0.12 | 0    | 0.12 | 0.12 | 0.12 | 3.2 | 3.2 | 0.2 | 3.5 | 0.13 | 0.01 | 0.14 | 0.13 | 0.14 | Amir Rrahmani       |\n+---+-----+----+--------+----+----+-------+------+---+---+---+---+---+---+---+------+------+------+------+------+-----+-----+-----+-----+------+------+------+------+------+---------------------+\n| 3 | COL | GK | 33-197 | 25 | 25 | 2,250 | 25   | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0   | 0   | 0    | 0    | 0    | 0    | 0    | David Ospina        |\n+---+-----+----+--------+----+----+-------+------+---+---+---+---+---+---+---+------+------+------+------+------+-----+-----+-----+-----+------+------+------+------+------+---------------------+\n| 4 | POL | MF | 27-300 | 27 | 23 | 1,742 | 19.4 | 5 | 5 | 5 | 0 | 0 | 1 | 0 | 0.26 | 0.26 | 0.52 | 0.26 | 0.52 | 2.8 | 2.8 | 2.9 | 5.7 | 0.14 | 0.15 | 0.3  | 0.14 | 0.3  | Piotr Zieliński     |\n+---+-----+----+--------+----+----+-------+------+---+---+---+---+---+---+---+------+------+------+------+------+-----+-----+-----+-----+------+------+------+------+------+---------------------+
 
 
 Okay so we've got a table with some good data. There 29 features availble including all of the match related stats in per 90 format. We even have ages and squad time. [Abhishek Sharma](https://sharmaabhishekk.github.io/projects/) provided some inspiration with his [notebook](https://sharmaabhishekk.github.io/mpl-footy/main/2021/08/09/squad-age-profile.html), where he creates a beautiful age-squad profile map. 
@@ -183,7 +183,7 @@ def squad_age_profile_chart(df, team_name):
 ```
 
 
-![Napoli_Age_Squad_Chart](Users/stephenahiabah/Desktop/GitHub/Webs-scarping-for-Fooball-Data-/Napoli Age-Squad Chart.png)
+![Napoli_Age_Squad_Chart](Napoli_Age_Squad_Chart.png)
 
 
 I'm an arsenal fan so ages curves are all the rage right now and I can safely say, this Napoli squad does not look future ready. I've gone with the peak Age range of 24 to 28.5 as this gives us just the right catchment for all players at elite level. 
@@ -198,7 +198,7 @@ A good start but lets go further.
 
 Lets see if we can take some fixture data from another table in FBREF.
 
-![png](Napoli Fixture.png)
+![Napoli_Fixtures](Napoli_Fixture.png)
 
 We're going to write a similar function to what was used for the squad data scrape however we need to contruct a table with a new shape and new features. 
 
@@ -237,7 +237,7 @@ league_results = league_results.loc[(league_results['captain'] != '') & (league_
 league_results 
 ```
 
-'-  ---  -----  -------  -  ---------  -----  ---  ------  --------------------  -  ----  ---------------  ---  --  -\n0  0.5  20:45  Serie A  2  Venezia    4-3-3  Sun  20,000  Gianluca Aureliano    W  Home  Lorenzo Insigne  2.3  56  0\n1  0.6  18:30  Serie A  2  Genoa      4-3-3  Sun  20,000  Marco Di Bello        W  Away  Lorenzo Insigne  1.1  61  1\n2  1    18:00  Serie A  2  Juventus   4-3-3  Sat  23,500  Massimiliano Irrati   W  Home  Lorenzo Insigne  2.1  67  1\n4  0.3  20:45  Serie A  4  Udinese    4-3-3  Mon  11,484  Gianluca Manganiello  W  Away  Lorenzo Insigne  2.4  63  0\n5  0.6  18:30  Serie A  4  Sampdoria  4-3-3  Thu  4,596   Paolo Valeri          W  Away  Lorenzo Insigne  2.2  52  0\n-  ---  -----  -------  -  ---------  -----  ---  ------  --------------------  -  ----  ---------------  ---  --  -'
+'+---+-----+-------+---------+---+-----------+-------+-----+--------+----------------------+---+------+-----------------+-----+----+---+\n| 0 | 0.5 | 20:45 | Serie A | 2 | Venezia   | 4-3-3 | Sun | 20,000 | Gianluca Aureliano   | W | Home | Lorenzo Insigne | 2.3 | 56 | 0 |\n+---+-----+-------+---------+---+-----------+-------+-----+--------+----------------------+---+------+-----------------+-----+----+---+\n| 1 | 0.6 | 18:30 | Serie A | 2 | Genoa     | 4-3-3 | Sun | 20,000 | Marco Di Bello       | W | Away | Lorenzo Insigne | 1.1 | 61 | 1 |\n+---+-----+-------+---------+---+-----------+-------+-----+--------+----------------------+---+------+-----------------+-----+----+---+\n| 2 | 1   | 18:00 | Serie A | 2 | Juventus  | 4-3-3 | Sat | 23,500 | Massimiliano Irrati  | W | Home | Lorenzo Insigne | 2.1 | 67 | 1 |\n+---+-----+-------+---------+---+-----------+-------+-----+--------+----------------------+---+------+-----------------+-----+----+---+\n| 4 | 0.3 | 20:45 | Serie A | 4 | Udinese   | 4-3-3 | Mon | 11,484 | Gianluca Manganiello | W | Away | Lorenzo Insigne | 2.4 | 63 | 0 |\n+---+-----+-------+---------+---+-----------+-------+-----+--------+----------------------+---+------+-----------------+-----+----+---+\n| 5 | 0.6 | 18:30 | Serie A | 4 | Sampdoria | 4-3-3 | Thu | 4,596  | Paolo Valeri         | W | Away | Lorenzo Insigne | 2.2 | 52 | 0 |\n+---+-----+-------+---------+---+-----------+-------+-----+--------+----------------------+---+------+-----------------+-----+----+---+'
 
 
 
