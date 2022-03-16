@@ -8,11 +8,12 @@ Code & notebook for this post can be found [here](https://github.com/steveaq/Web
 
 In my previous post, which you can find [here](), I outlined the current data landscape in the football analytics world and how one might go about aquiring those related metrics.
 
-![png](scraper.png)
 
 This post is a part of series of posts, where we will explore how to use web-scraping packages available in python to get football data as efficiently as possible.
 
+
 This project is written in Python and my webscraper of choice is BeautifulSoup. I've had a little bit of exposure to this already and seems to be the most popular 'web-scraper'. so naturally as safe bet.
+
 
 For the data source, I've gone with FBREF, very popular with the football hipsters and kids on twitter that comment 'ykb' under posts they agree with. 
 The underlying data for FBREF is provided by StatsBomb, so A* for reliabilty and accuracy.
@@ -78,7 +79,13 @@ Let's load the data. For the sake of ease lets start with a squad page. I've gon
 
 ![Napoli_Team](Napoli_Team.png)
 
+## Napoli Team Analysis
+
+
+#### Scraping Functions
+
  The first function requires the URL of squad to be passed, in order to return a pandas dataframe with the high level per/90 team stats available on this page.
+
 
 ```python
 def generate_squadlist(url): 
@@ -111,6 +118,7 @@ def generate_squadlist(url):
     df.set_index("Player")
 ```
 
+#### Get list of players in squad
 
 The above functions works on any page with this template so effectly any teams stats page will work with this function. 
 
@@ -325,6 +333,7 @@ Now lets have a look a the output
   </tbody>
 </table>
 
+#### Creating visualisations from based on web-scraped dataset
 
 Okay so we've got a table with some good data. There 29 features availble including all of the match related stats in per 90 format. We even have ages and squad time. [Abhishek Sharma](https://sharmaabhishekk.github.io/projects/) provided some inspiration with his [notebook](https://sharmaabhishekk.github.io/mpl-footy/main/2021/08/09/squad-age-profile.html), where he creates a beautiful age-squad profile map. 
 
@@ -382,25 +391,37 @@ def squad_age_profile_chart(df, team_name):
                         pe.Normal()])
 
 ```
-I'm an arsenal fan so ages curves are all the rage right now and I can safely say, this Napoli squad does not look future ready. I've gone with the peak Age range of 25 to 27 as this gives us just the right catchment for all players at elite level as argued by Seife Dendir in this article in the [Journal of Sports Analytics 2 (2016) 89–105](https://www.researchgate.net/publication/309367548_When_do_soccer_players_peak_A_note).
+
+
+I've gone with the peak Age range of 25 to 27 as this is argued by Seife Dendir in his article in the [Journal of Sports Analytics 2 (2016) 89–105](https://www.researchgate.net/publication/309367548_When_do_soccer_players_peak_A_note). The range was determined using WhoScored.com performance ratings of players in the four major top ﬂight leagues of Europe from 2010/11 to 2014/15. 
 
 ![Napoli_Age_Squad_Chart](Napoli_Age_Squad_Chart.png)
 
-As we can see there's a troubling distribution here. Napoli have a hight proprtion of players just about to exit their peak or past their peak with a siginifant share of league minutes. From just an eye ball I can see regular starters like Koulibaly, Di Lorenzo very much on the 'wrong side of 30'. Obviously there are limitations, a few are:
+
+
+As we can see there's a troubling distribution here. Napoli have a high proprtion of players just about to exit their peak or past their peak with a siginifant share of league minutes. From just an eye ball I can see regular starters like Koulibaly, Di Lorenzo very much on the 'wrong side of 30'. However we cant just take this data in isolation as there are obvious limitations a few are:
 
 - We need to get the age profile of the league for a true comparison
 - We are not including longetivity as a variable. Wherein some players simply just last longer at the elite level than others
 - Not all peaks are equal, goalkeepers & defenders have much later peaks than forward players 
 - This doesnt account for injury records to clearly explain the factors effecting share of minutes.
 
-A good start. We have managed to scrape data from FBREF, cleaned up the data we have gathered and then done some interesting data visualisations on top of this.
-As mentioned previously, FBREF has extensive data so lets take a look at scraping another mini site. 
 
-Lets see if we can take some fixture data from another table in FBREF.
+So all in all, a good start. We have managed to scrape data from FBREF, cleaned up the data we have gathered and then done some interesting data visualisations on top of this.
+As mentioned previously, this data source has extensive minisites and other sub-pages so lets take a look at scraping another on of those areas. 
+
+#### Scraping fixture data
+
+Naturally when assesing a team we need performance data and the best place can look is the in FBRefs team specific fixture page Lets see if we can take some fixture data from another table in the website.
 
 ![Napoli_Fixtures](Napoli_Fixture.png)
 
-We're going to write a similar function to what was used for the squad data scrape however we need to contruct a table with a new shape and new features. 
+We're going to write a similar function to what was used for the squad data scrape however we need to contruct a table with a new shape and new features match whats on the webpage: 
+
+```python
+{"date" , "time","comp","Round","dayofweek", "venue","result","goals_for","goals_against","opponent","xg_for","xg_against","possession","attendance","captain", "formation","referee"}
+```
+
 
 ```python
 
@@ -428,15 +449,17 @@ def team_fixture_data(x):
     df = pd.DataFrame.from_dict(pre_df)
     return df 
 ```
+
+
 To clean up the table slightly, we're going to select only the domestic league fixtures and fixtures that have already been played.
 
-```python
 
+```python
 league_results = team_fixture_data("https://fbref.com/en/squads/d48ad4ff/2021-2022/matchlogs/all_comps/schedule/Napoli-Scores-and-Fixtures-All-Competitions")
 league_results = league_results.loc[(league_results['captain'] != '') & (league_results['comp'] == 'Serie A')]
 league_results 
 ```
-Resulting Table will now look like this: 
+The resulting table will now look like this: 
 
 <table border="1" class="dataframe">
   <thead>
@@ -553,6 +576,7 @@ Resulting Table will now look like this:
   </tbody>
 </table>
 
+#### xExpected Goal Difference vs Goal Difference
 
 Now lets investigate Napoli's league performance data. 
 
