@@ -781,7 +781,8 @@ Resulting Table should look like this:
 </table>
 
 
-The league table data is slightly different to that of the previous tables we scraped, wherein the metrics are no longer 'per-90-fied', so we need to do that. In addition as we have the feature 'Last 5' this table. The actual table on its own is pretty useless in isolation, but we can do some string manipulation and turn this in another feature, lets call it ppg_form. The functions below show how we could go about calulating these new requirements, and apply these functions to our dataframe. 
+The league table data is slightly different to that of the previous tables we scraped, wherein the metrics are no longer 'per-90-fied', so we need to do that. In addition as we have the feature 'Last 5' this table. The actual feature on its own is pretty useless in isolation, but we can do some string manipulation and turn this in another feature, lets call it ppg_form. 
+
 
 ```python
 def p90_Calculator(variable_value, minutes_played):
@@ -887,17 +888,17 @@ From this viz, we cans see that Napoli, although not accumulating that many poin
 
 As mentioned in the into to this post I was looking to acheieve the follwing key items: 
 
-- Create a set of working functions to aggregate data from FBREF. - [x]
-    We have done so, taking 3 seprate data-tables from FBREF minisites and converting them into pandas data frames
+- [x] *Create a set of working functions to aggregate data from FBREF.*
+- - We have done so, taking 3 seprate data-tables from FBREF minisites and converting them into pandas data frames
 
-- Perform a series of data munging tasks to get easy to to use datasets ready for analysis. - [x]
-    We have created our features & variables utilising dataset manipulation technique availbe just using pandas
+- [x] *Perform a series of data munging tasks to get easy to to use datasets ready for analysis.* 
+- - We have created our features & variables utilising dataset manipulation technique availbe just using pandas
 
-- Create a series of Data Visualisations from these cleaned datasets. - [x]
-    We have managed to create 3 visuals from our scraped data sets and gotten simple yet meaniful insights from them
+- [x] *Create a series of Data Visualisations from these cleaned datasets.* 
+- - We have managed to create 3 visuals from our scraped data sets and gotten simple yet meaniful insights from them
 
-- Assess the meaningful metrics we need to start making some predictions on player suitability to positions. - [ ]
-    We did not manage to hit this item yet as we've only looked at league and team data
+- [x] *Assess the meaningful metrics we need to start making some predictions on player suitability to positions.*
+-  - We did not manage to hit this item yet as we've only looked at league and team data
 
 Next week we're going to dive straight into getting some player data in part 2.
 
