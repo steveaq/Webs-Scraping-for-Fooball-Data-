@@ -6,7 +6,7 @@ classes: wide
 
 Code & notebook for this post can be found [here](https://github.com/steveaq/Webs-Scraping-for-Fooball-Data-/blob/main/FBREF%20League%20%26%20Team%20Data%20Exploration.ipynb). 
 
-In my previous post, which you can find [here](), I outlined the current data landscape in the football analytics world and how one might go about aquiring those related metrics.
+In my previous post, which you can find [here](), I outlined the current data landscape in the football analytics world including my picks for the best free resources out there.
 
 
 This post is a part of series of posts, where we will explore how to use web-scraping packages available in python to get football data as efficiently as possible.
@@ -15,7 +15,7 @@ This post is a part of series of posts, where we will explore how to use web-scr
 This project is written in Python and my webscraper of choice is BeautifulSoup. I've had a little bit of exposure to this already and seems to be the most popular 'web-scraper'. so naturally as safe bet.
 
 
-For the data source, I've gone with FBREF, very popular with the football hipsters and kids on twitter that comment 'ykb' under posts they agree with. 
+For the data source, I've gone with FBREF, very popular with the football hipsters and kids on football twitter that comment 'ykb' under posts they agree with. 
 The underlying data for FBREF is provided by StatsBomb, so A* for reliabilty and accuracy.
 There is vast amount of this data available at league, team, player and match level, complete with deatiled metrics such as pass types and even body parts used for passes. The issue is being able to programtically sift through the webpages to get there. 
 
@@ -337,9 +337,9 @@ Now lets have a look a the output
 
 Okay so we've got a table with some good data. There 29 features availble including all of the match related stats in per 90 format. We even have ages and squad time. [Abhishek Sharma](https://sharmaabhishekk.github.io/projects/) provided some inspiration with his [notebook](https://sharmaabhishekk.github.io/mpl-footy/main/2021/08/09/squad-age-profile.html), where he creates a beautiful age-squad profile map. 
 
-This particular visualisation really helps illustrate the age distrubtions of a squad and could be used to supplement analysis regarding player performance, squad importance and possibly even tranfer planning. 
+This particular visualisation really helps illustrate the age distrubtions of a squad. Charts such as these could be used to supplement analysis regarding; player performance, squad importance and possibly even tranfer planning. 
 
-Lets do something similar but use the dataset we have loaded in and put it in to a function to have a look at Napoli's squad age to share of minutes played profile.
+Lets do something similar but use the dataset we have loaded in and put it in to a function to have a look at Napoli's squad age vs share of minutes played profile. 
 
 
 ```python
@@ -398,8 +398,7 @@ I've gone with the peak Age range of 25 to 27 as this is argued by Seife Dendir 
 ![Napoli_Age_Squad_Chart](Napoli_Age_Squad_Chart.png)
 
 
-
-As we can see there's a troubling distribution here. Napoli have a high proprtion of players just about to exit their peak or past their peak with a siginifant share of league minutes. From just an eye ball I can see regular starters like Koulibaly, Di Lorenzo very much on the 'wrong side of 30'. However we cant just take this data in isolation as there are obvious limitations a few are:
+As we can see, there's a troubling distribution here. Napoli have a high proprtion of players just about to exit their peak or past their peak with a siginifant share of league minutes. From just an eye ball I can see regular starters like Koulibaly, Di Lorenzo are very much on the 'wrong side of 30'. However we cant just take this data in isolation as there are obvious limitations a few are:
 
 - We need to get the age profile of the league for a true comparison
 - We are not including longetivity as a variable. Wherein some players simply just last longer at the elite level than others
@@ -578,7 +577,7 @@ The resulting table will now look like this:
 
 #### xExpected Goal Difference vs Goal Difference
 
-Now lets investigate Napoli's league performance data. 
+Now lets dive deeper and investigate Napoli's league performance data. Naturally, you might start with looking at league standings, however we want to acertain how Napoli have performed over the course of the Season so far. 
 
 ```python
 def generate_xg_analysis_chart(df):
@@ -627,9 +626,20 @@ def generate_xg_analysis_chart(df):
                 highlight_textprops=[{"color": gd_color},
                                         {"color": xgd_color}])
 ```
-
+Goal Difference vs Expected Goal difference, in my opinion is really good way to visualise how well a team is performing, as it can indicate not only how effectively a team is scoring and keeping shots out on a rolling basis, the xExpected metrics can allow us to identify periods of under/overperformance. 
+Going further, we could overlay this chart with key event data such change of manager, formation and even injuries to key players to allow for more comprehensive analysis.
 
 ![Napoli_GD_vs_xGD](GD_vs_xGD.png)
+
+From the chart we can see that Napoli started the league absolutely on fire, overperforming on their xGD by over a goal, the subsequent weeks up until MW 13 where can see a reversal of the good early season form, wherein now they are underperfroming on the thier xGD by a goal. 
+If we cross reference this against their league results, in this period, Napoli went 1 win in 5, losing to Inter, Atalanta and Empoli at home and drawing with Sassuolo. To go even further, the absense of Napoli's Talismanic forward Victor Osimhen also correlates to their weeks of underperformance in relation to xGD. Osimhen was out from the 21st of November till the 14th of January, so MW13 to MW22. Taking a second look at the chart, after MW22 is when we start to see Napoli start peforming above their xGD again. for refrence you can find Victor Osimhens injury record [here](https://www.transfermarkt.co.uk/victor-osimhen/verletzungen/spieler/401923) and I've added Napoli's league results [here](https://www.whoscored.com/Teams/276/Fixtures/Italy-Napoli).
+
+Great. Pretty simple work to get the get the data and we've done some analysis that checks out with the real world events. 
+
+Finally we're going to have a look at the performance of the rest of the teams in the league. 
+I wrote another function to pull out the league data from this page. 
+Again we need to make sure we're only pulling the features we need and in this case we need and convert the columns we're going to use for calculation into numeric data-types.
+
 
 ```python
 def generate_league_data(x):
@@ -659,7 +669,7 @@ def generate_league_data(x):
     df["minutes_played"] = df["games"] *90
     return(df)
 ```
-
+Resulting Table should look like this: 
 
 <table border="1" class="dataframe">
   <thead>
@@ -771,12 +781,7 @@ def generate_league_data(x):
 </table>
 
 
-
-```python
-df = generate_league_data("https://fbref.com/en/comps/9/Premier-League-Stats")
-df['path'] = df["squad"] + '.png'
-df[["squad","xg_for","xg_against", "path"]]
-```
+The league table data is slightly different to that of the previous tables we scraped, wherein the metrics are no longer 'per-90-fied', so we need to do that. In addition as we have the feature 'Last 5' this table. The actual table on its own is pretty useless in isolation, but we can do some string manipulation and turn this in another feature, lets call it ppg_form. The functions below show how we could go about calulating these new requirements, and apply these functions to our dataframe. 
 
 ```python
 def p90_Calculator(variable_value, minutes_played):
@@ -797,15 +802,22 @@ def form_ppg_calc(variable_value):
     ppg = points/5
     return ppg
 
+df['xG_p90'] = df.apply(lambda x: p90_Calculator(x['xg_for'], x['minutes_played']), axis=1)
+df['xGA_p90'] = df.apply(lambda x: p90_Calculator(x['xg_against'], x['minutes_played']), axis=1)
+df['ppg_form'] = df.apply(lambda x: form_ppg_calc(x['last_5']), axis=1)
+
+```
+The final auxillary fucntion we need to create a viz from our leage data is the actual images of the team badges. FC Python has a great [tutorial](https://fcpython.com/visualisation/creating-scatter-plots-with-club-logos-in-python) of how to do this using EPL teams.  
+
+```python
 def getImage(path):
     return OffsetImage(plt.imread(path), zoom=.05, alpha = 1)
 ```
 
-```python
-df['xG_p90'] = df.apply(lambda x: p90_Calculator(x['xg_for'], x['minutes_played']), axis=1)
-df['xGA_p90'] = df.apply(lambda x: p90_Calculator(x['xg_against'], x['minutes_played']), axis=1)
-df['ppg_form'] = df.apply(lambda x: form_ppg_calc(x['last_5']), axis=1)
-```
+Plotting every teams relative GD vs xGD can be quite cumbersome and the resulting chart will look messy and hard to actually infer any information from. Instead, we're going to use our new 'per-90-fied' stats to get the xGD and plot that against league form. This chart should tell us which are teams getting results and how sustainable their form is.
+For example a with a postive and high xGD accumlating several points indicates not only good form but sustainable form and vice versa.
+
+
 ```python
 import matplotlib.pyplot as plt
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
@@ -815,9 +827,7 @@ ax.scatter(df["ppg_form"], df["xg_diff_per90"])
 for index, row in df.iterrows():
     ab = AnnotationBbox(getImage(os.path.join("team_logos/"+row["path"])), (row["ppg_form"], row["xg_diff_per90"]), frameon=False)
     ax.add_artist(ab)
-```
-![ppg_vs_xdg_1](ppg_vs_xdg_1.png)
-```python
+
 # Set font and background colour
 bgcol = '#fafafa'
 
@@ -871,13 +881,29 @@ plt.savefig('xGChart.png', dpi=1200, bbox_inches = "tight")
 
 ![ppg_vs_xdg_2](ppg_vs_xdg_2.png)
 
+From this viz, we cans see that Napoli, although not accumulating that many points per game in the last 5 are still accruing a league leading xGD. Sassuolo however are accumulating more points at similar pace to the league leaders AC Milan but at a negative xGD, possibly indicating a massive overperformance.
 
 ## Conclusion
 
-The success of GPT-3 has spun up a lot of debate as to whether these enormous language models have an 'understanding' of words, know what concepts mean and can reason. Some say it doesn't matter and for a lot of purposes I agree, it doesn't. However when discussing AGI, I think it does and even with GPT-3 you don't have to look too far to 'fool' it. What our little experiment above shows is that a GPT can pick up corelations in the text at many different levels - each layer or set of attention heads may learn relations between words or even 'concepts', style, grammar, maths and more - *if it is there in the text*. But these models can't go further than what might be in the text for now...
+As mentioned in the into to this post I was looking to acheieve the follwing key items: 
 
-Lastly, minGPT is a really outstanding resource for learning about transformers - understanding the theory is one thing but then seeing it coded can often be completely different and you gain a lot from seeing a big model like this broken down so well. Plus, a bonus is that its in PyTorch!
+- Create a set of working functions to aggregate data from FBREF. - [x]
+    We have done so, taking 3 seprate data-tables from FBREF minisites and converting them into pandas data frames
 
+- Perform a series of data munging tasks to get easy to to use datasets ready for analysis. - [x]
+    We have created our features & variables utilising dataset manipulation technique availbe just using pandas
+
+- Create a series of Data Visualisations from these cleaned datasets. - [x]
+    We have managed to create 3 visuals from our scraped data sets and gotten simple yet meaniful insights from them
+
+- Assess the meaningful metrics we need to start making some predictions on player suitability to positions. - [ ]
+    We did not manage to hit this item yet as we've only looked at league and team data
+
+Next week we're going to dive straight into getting some player data in part 2.
+
+Thanks for reading! 
+
+Steve 
 
 
 
