@@ -886,7 +886,7 @@ From this viz, we cans see that Napoli, although not accumulating that many poin
 
 ## Conclusion
 
-As mentioned in the into to this post I was looking to acheieve the follwing key items: 
+As mentioned in the into to this post I was looking to achieve the follwing key items: 
 
 - [x] *Create a set of working functions to aggregate data from FBREF.*
 - - We have done so, taking 3 seprate data-tables from FBREF minisites and converting them into pandas data frames
