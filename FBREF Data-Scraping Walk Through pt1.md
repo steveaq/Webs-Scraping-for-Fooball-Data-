@@ -393,7 +393,9 @@ def squad_age_profile_chart(df, team_name):
 ```
 
 
-I've gone with the peak Age range of 25 to 27 as this is argued by Seife Dendir in his article in the [Journal of Sports Analytics 2 (2016) 89–105](https://www.researchgate.net/publication/309367548_When_do_soccer_players_peak_A_note). The range was determined using WhoScored.com performance ratings of players in the four major top ﬂight leagues of Europe from 2010/11 to 2014/15. 
+I've gone with the peak Age range of 25 to 27 as this is argued by Seife Dendir in his article in the [Journal of Sports Analytics 2 (2016) 89–105](https://www.researchgate.net/publication/309367548_When_do_soccer_players_peak_A_note). 
+
+The range was determined using WhoScored.com performance ratings of players in the four major top ﬂight leagues of Europe from 2010/11 to 2014/15. 
 
 ![Napoli_Age_Squad_Chart](Napoli_Age_Squad_Chart.png)
 
@@ -418,7 +420,7 @@ Naturally when assesing a team we need performance data and the best place can l
 We're going to write a similar function to what was used for the squad data scrape however we need to contruct a table with a new shape and new features match whats on the webpage: 
 
 ```python
-{"date" , "time","comp","Round","dayofweek", "venue","result","goals_for","goals_against","opponent","xg_for","xg_against","possession","attendance","captain", "formation","referee"}
+{"date","time","comp","Round","dayofweek", "venue","result","goals_for","goals_against","opponent","xg_for","xg_against","possession","attendance","captain", "formation","referee"}
 ```
 
 
@@ -579,6 +581,9 @@ The resulting table will now look like this:
 
 Now lets dive deeper and investigate Napoli's league performance data. Naturally, you might start with looking at league standings, however we want to acertain how Napoli have performed over the course of the Season so far. 
 
+Goal Difference vs Expected Goal difference, in my opinion is really good way to visualise how well a team is performing, as it can indicate not only how effectively a team is scoring and keeping shots out on a rolling basis, the xExpected metrics can allow us to identify periods of under/overperformance. 
+Going further, we could overlay this chart with key event data such change of manager, formation and even injuries to key players to allow for more comprehensive analysis.
+
 ```python
 def generate_xg_analysis_chart(df):
         window = 5
@@ -626,8 +631,8 @@ def generate_xg_analysis_chart(df):
                 highlight_textprops=[{"color": gd_color},
                                         {"color": xgd_color}])
 ```
-Goal Difference vs Expected Goal difference, in my opinion is really good way to visualise how well a team is performing, as it can indicate not only how effectively a team is scoring and keeping shots out on a rolling basis, the xExpected metrics can allow us to identify periods of under/overperformance. 
-Going further, we could overlay this chart with key event data such change of manager, formation and even injuries to key players to allow for more comprehensive analysis.
+
+From this function, we are able to produce our xGD vs GD Performance chart. In this example the xGD per90 is calulated on a 5 game rolling average basis to correct for any swings in form that will detract fromt he insight we're trying to gain from this chart.
 
 ![Napoli_GD_vs_xGD](GD_vs_xGD.png)
 
@@ -635,6 +640,8 @@ From the chart we can see that Napoli started the league absolutely on fire, ove
 If we cross reference this against their league results, in this period, Napoli went 1 win in 5, losing to Inter, Atalanta and Empoli at home and drawing with Sassuolo. To go even further, the absense of Napoli's Talismanic forward Victor Osimhen also correlates to their weeks of underperformance in relation to xGD. Osimhen was out from the 21st of November till the 14th of January, so MW13 to MW22. Taking a second look at the chart, after MW22 is when we start to see Napoli start peforming above their xGD again. for refrence you can find Victor Osimhens injury record [here](https://www.transfermarkt.co.uk/victor-osimhen/verletzungen/spieler/401923) and I've added Napoli's league results [here](https://www.whoscored.com/Teams/276/Fixtures/Italy-Napoli).
 
 Great. Pretty simple work to get the get the data and we've done some analysis that checks out with the real world events. 
+
+#### xExpected Goal Difference vs Points Per Game
 
 Finally we're going to have a look at the performance of the rest of the teams in the league. 
 I wrote another function to pull out the league data from this page. 
@@ -808,7 +815,7 @@ df['xGA_p90'] = df.apply(lambda x: p90_Calculator(x['xg_against'], x['minutes_pl
 df['ppg_form'] = df.apply(lambda x: form_ppg_calc(x['last_5']), axis=1)
 
 ```
-The final auxillary fucntion we need to create a viz from our leage data is the actual images of the team badges. FC Python has a great [tutorial](https://fcpython.com/visualisation/creating-scatter-plots-with-club-logos-in-python) of how to do this using EPL teams.  
+The final auxillary function we need to create a viz from our leage data is the actual images of the team badges. FC Python has a great [tutorial](https://fcpython.com/visualisation/creating-scatter-plots-with-club-logos-in-python) of how to do this using EPL teams.  
 
 ```python
 def getImage(path):
@@ -816,7 +823,7 @@ def getImage(path):
 ```
 
 Plotting every teams relative GD vs xGD can be quite cumbersome and the resulting chart will look messy and hard to actually infer any information from. Instead, we're going to use our new 'per-90-fied' stats to get the xGD and plot that against league form. This chart should tell us which are teams getting results and how sustainable their form is.
-For example a with a postive and high xGD accumlating several points indicates not only good form but sustainable form and vice versa.
+For example a team with a postive and high xGD accumlating several points, indicates not only good form but sustainable form and vice versa.
 
 
 ```python
@@ -882,7 +889,9 @@ plt.savefig('xGChart.png', dpi=1200, bbox_inches = "tight")
 
 ![ppg_vs_xdg_2](ppg_vs_xdg_2.png)
 
-From this viz, we cans see that Napoli, although not accumulating that many points per game in the last 5 are still accruing a league leading xGD. Sassuolo however are accumulating more points at similar pace to the league leaders AC Milan but at a negative xGD, possibly indicating a massive overperformance.
+From this viz, we cans see that Napoli, although not accumulating that many points per game in the last 5 are still accruing a league leading xGD. Compared to a team like Sassuolo, we can see they are accumulating more points at similar pace to the league leaders AC Milan but at a negative xGD, possibly indicating a massive overperformance.
+Inter Milan & Atalanta are two examples of team that are not picking up as many points as the league average in the last 5 games but they are maintainting better xGDs than teams that are in form indicating a significant underperformance at present. 
+Looking at the other end of the chart, we can see several mid-table teams particularly Bologna & Empoli who are (12th and 13th at the time of writing) are performing at relegation level form. Both teams are 11 points from the drop and with other teams in around them not performing either they may just be safe from the drop this year. 
 
 ## Conclusion
 
@@ -897,7 +906,7 @@ As mentioned in the into to this post I was looking to achieve the follwing key 
 - [x] *Create a series of Data Visualisations from these cleaned datasets.* 
 - We have managed to create 3 visuals from our scraped data sets and gotten simple yet meaniful insights from them
 
-- [x] *Assess the meaningful metrics we need to start making some predictions on player suitability to positions.*
+- [ ] *Assess the meaningful metrics we need to start making some predictions on player suitability to positions.*
 - We did not manage to hit this item yet as we've only looked at league and team data
 
 Next week we're going to dive straight into getting some player data in part 2.
