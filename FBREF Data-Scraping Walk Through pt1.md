@@ -889,16 +889,16 @@ From this viz, we cans see that Napoli, although not accumulating that many poin
 As mentioned in the into to this post I was looking to achieve the follwing key items: 
 
 - [x] *Create a set of working functions to aggregate data from FBREF.*
-- - We have done so, taking 3 seprate data-tables from FBREF minisites and converting them into pandas data frames
+- We have done so, taking 3 seprate data-tables from FBREF minisites and converting them into pandas data frames
 
 - [x] *Perform a series of data munging tasks to get easy to to use datasets ready for analysis.* 
-- - We have created our features & variables utilising dataset manipulation technique availbe just using pandas
+- We have created our features & variables utilising dataset manipulation technique availbe just using pandas
 
 - [x] *Create a series of Data Visualisations from these cleaned datasets.* 
-- - We have managed to create 3 visuals from our scraped data sets and gotten simple yet meaniful insights from them
+- We have managed to create 3 visuals from our scraped data sets and gotten simple yet meaniful insights from them
 
 - [x] *Assess the meaningful metrics we need to start making some predictions on player suitability to positions.*
--  - We did not manage to hit this item yet as we've only looked at league and team data
+- We did not manage to hit this item yet as we've only looked at league and team data
 
 Next week we're going to dive straight into getting some player data in part 2.
 
