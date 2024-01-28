@@ -1,0 +1,419 @@
+,match_id,venue,team_name,variable,value,team_id
+0,1,Away,Manchester City,xG_ag,0.3,8456
+1,2,Away,Nott'ham Forest,xG_ag,0.8,10203
+2,3,Away,Fulham,xG_ag,2.7,9879
+3,4,Away,Crystal Palace,xG_ag,0.5,9826
+4,5,Away,Luton Town,xG_ag,4.0,8346
+5,6,Away,West Ham,xG_ag,1.3,8654
+6,7,Away,Aston Villa,xG_ag,3.3,10252
+7,8,Away,Tottenham,xG_ag,2.2,8586
+8,9,Away,Liverpool,xG_ag,1.4,8650
+9,10,Away,Wolves,xG_ag,2.2,8602
+10,11,Away,Sheffield Utd,xG_ag,1.4,8657
+11,12,Away,Brentford,xG_ag,0.5,9937
+12,13,Away,Bournemouth,xG_ag,3.0,8678
+13,14,Away,Brighton,xG_ag,2.1,10204
+14,15,Away,Manchester Utd,xG_ag,1.7,10260
+15,16,Away,Newcastle Utd,xG_ag,1.0,10261
+16,17,Away,Everton,xG_ag,2.9,8668
+17,18,Away,Chelsea,xG_ag,1.8,8455
+18,19,Away,Arsenal,xG_ag,1.0,9825
+19,20,Away,Luton Town,xG_ag,2.2,8346
+20,21,Away,Tottenham,xG_ag,0.7,8586
+21,22,Away,Wolves,xG_ag,1.3,8602
+22,23,Away,Crystal Palace,xG_ag,1.0,9826
+23,24,Away,Nott'ham Forest,xG_ag,2.8,10203
+24,25,Away,Fulham,xG_ag,3.2,9879
+25,26,Away,West Ham,xG_ag,1.5,8654
+26,27,Away,Manchester City,xG_ag,0.7,8456
+27,28,Away,Aston Villa,xG_ag,0.7,10252
+28,29,Away,Liverpool,xG_ag,2.0,8650
+29,30,Away,West Ham,xG_ag,1.4,8654
+30,31,Away,Everton,xG_ag,1.2,8668
+31,32,Away,Nott'ham Forest,xG_ag,2.3,10203
+32,33,Away,Fulham,xG_ag,2.2,9879
+33,34,Away,Bournemouth,xG_ag,2.9,8678
+34,35,Away,Tottenham,xG_ag,1.3,8586
+35,36,Away,Newcastle Utd,xG_ag,1.3,10261
+36,37,Away,Aston Villa,xG_ag,2.5,10252
+37,38,Away,Wolves,xG_ag,2.1,8602
+38,39,Away,Manchester Utd,xG_ag,2.3,10260
+39,40,Away,Liverpool,xG_ag,0.6,8650
+40,41,Away,Luton Town,xG_ag,1.0,8346
+41,42,Away,Manchester City,xG_ag,0.9,8456
+42,43,Away,Crystal Palace,xG_ag,3.0,9826
+43,44,Away,Brighton,xG_ag,1.0,10204
+44,45,Away,Sheffield Utd,xG_ag,2.1,8657
+45,46,Away,Brentford,xG_ag,1.4,9937
+46,47,Away,Chelsea,xG_ag,1.0,8455
+47,48,Away,Arsenal,xG_ag,0.3,9825
+48,49,Away,Burnley,xG_ag,0.7,8191
+49,50,Away,Nott'ham Forest,xG_ag,1.3,10203
+50,51,Away,Wolves,xG_ag,2.1,8602
+51,52,Away,Fulham,xG_ag,0.3,9879
+52,53,Away,Everton,xG_ag,1.0,8668
+53,54,Away,Manchester Utd,xG_ag,1.1,10260
+54,55,Away,Tottenham,xG_ag,1.8,8586
+55,56,Away,Bournemouth,xG_ag,1.9,8678
+56,57,Away,Aston Villa,xG_ag,1.3,10252
+57,58,Away,West Ham,xG_ag,3.0,8654
+58,59,Away,Newcastle Utd,xG_ag,0.9,10261
+59,60,Away,Brighton,xG_ag,1.6,10204
+60,61,Away,Manchester City,xG_ag,0.4,8456
+61,62,Away,Arsenal,xG_ag,0.6,9825
+62,63,Away,Luton Town,xG_ag,2.9,8346
+63,64,Away,Burnley,xG_ag,3.1,8191
+64,65,Away,Sheffield Utd,xG_ag,2.1,8657
+65,66,Away,Crystal Palace,xG_ag,1.3,9826
+66,67,Away,Liverpool,xG_ag,2.2,8650
+67,68,Away,Brentford,xG_ag,0.5,9937
+68,69,Away,Chelsea,xG_ag,1.1,8455
+69,70,Away,Burnley,xG_ag,1.3,8191
+70,71,Away,Tottenham,xG_ag,0.8,8586
+71,72,Away,Bournemouth,xG_ag,2.4,8678
+72,73,Away,Brentford,xG_ag,1.4,9937
+73,74,Away,Chelsea,xG_ag,0.7,8455
+74,75,Away,Sheffield Utd,xG_ag,2.2,8657
+75,76,Away,Nott'ham Forest,xG_ag,0.8,10203
+76,77,Away,Newcastle Utd,xG_ag,1.2,10261
+77,78,Away,Aston Villa,xG_ag,1.7,10252
+78,79,Away,Liverpool,xG_ag,2.3,8650
+79,80,Away,Manchester City,xG_ag,0.4,8456
+80,81,Away,Everton,xG_ag,2.2,8668
+81,82,Away,Wolves,xG_ag,0.6,8602
+82,83,Away,Crystal Palace,xG_ag,2.4,9826
+83,84,Away,Burnley,xG_ag,3.1,8191
+84,85,Away,Brighton,xG_ag,0.8,10204
+85,86,Away,Luton Town,xG_ag,2.9,8346
+86,87,Away,Arsenal,xG_ag,1.3,9825
+87,88,Away,Manchester Utd,xG_ag,1.4,10260
+88,89,Away,West Ham,xG_ag,1.9,8654
+89,90,Away,Fulham,xG_ag,1.5,9879
+90,91,Away,Tottenham,xG_ag,0.6,8586
+91,92,Away,Brentford,xG_ag,1.9,9937
+92,93,Away,Burnley,xG_ag,1.1,8191
+93,94,Away,Sheffield Utd,xG_ag,2.8,8657
+94,95,Away,Newcastle Utd,xG_ag,0.9,10261
+95,96,Away,Everton,xG_ag,0.7,8668
+96,97,Away,Nott'ham Forest,xG_ag,3.2,10203
+97,98,Away,Fulham,xG_ag,1.4,9879
+98,99,Away,Luton Town,xG_ag,2.3,8346
+99,100,Away,Manchester City,xG_ag,0.9,8456
+100,101,Away,Manchester Utd,xG_ag,1.0,10260
+101,102,Away,West Ham,xG_ag,1.5,8654
+102,103,Away,Brighton,xG_ag,0.7,10204
+103,104,Away,Crystal Palace,xG_ag,1.1,9826
+104,105,Away,Bournemouth,xG_ag,1.9,8678
+105,106,Away,Wolves,xG_ag,1.0,8602
+106,107,Away,Arsenal,xG_ag,1.0,9825
+107,108,Away,Aston Villa,xG_ag,0.4,10252
+108,109,Away,Liverpool,xG_ag,0.8,8650
+109,110,Away,Chelsea,xG_ag,0.9,8455
+110,111,Away,Tottenham,xG_ag,2.1,8586
+111,112,Away,Burnley,xG_ag,1.8,8191
+112,113,Away,Luton Town,xG_ag,2.2,8346
+113,114,Away,Everton,xG_ag,2.2,8668
+114,115,Away,Newcastle Utd,xG_ag,2.4,10261
+115,116,Away,Nott'ham Forest,xG_ag,1.8,10203
+116,117,Away,Brentford,xG_ag,1.7,9937
+117,118,Away,Fulham,xG_ag,3.0,9879
+118,119,Away,Sheffield Utd,xG_ag,1.5,8657
+119,120,Away,Manchester City,xG_ag,2.9,8456
+120,121,Away,Liverpool,xG_ag,1.3,8650
+121,122,Away,West Ham,xG_ag,1.3,8654
+122,123,Away,Brighton,xG_ag,1.9,10204
+123,124,Away,Bournemouth,xG_ag,0.8,8678
+124,125,Away,Chelsea,xG_ag,2.4,8455
+125,126,Away,Crystal Palace,xG_ag,0.9,9826
+126,127,Away,Arsenal,xG_ag,1.1,9825
+127,128,Away,Aston Villa,xG_ag,2.3,10252
+128,129,Away,Manchester Utd,xG_ag,2.4,10260
+129,130,Away,Wolves,xG_ag,2.9,8602
+130,131,Away,Luton Town,xG_ag,3.1,8346
+131,132,Away,Wolves,xG_ag,2.8,8602
+132,133,Away,Sheffield Utd,xG_ag,1.8,8657
+133,134,Away,Everton,xG_ag,0.7,8668
+134,135,Away,Manchester Utd,xG_ag,2.4,10260
+135,136,Away,Aston Villa,xG_ag,2.0,10252
+136,137,Away,Fulham,xG_ag,2.1,9879
+137,138,Away,Brighton,xG_ag,2.1,10204
+138,139,Away,Crystal Palace,xG_ag,1.1,9826
+139,140,Away,Tottenham,xG_ag,2.6,8586
+140,141,Away,Burnley,xG_ag,0.8,8191
+141,142,Away,Arsenal,xG_ag,0.5,9825
+142,143,Away,Liverpool,xG_ag,1.0,8650
+143,144,Away,Bournemouth,xG_ag,1.0,8678
+144,145,Away,Brentford,xG_ag,1.5,9937
+145,146,Away,Nott'ham Forest,xG_ag,2.5,10203
+146,147,Away,Manchester City,xG_ag,2.3,8456
+147,148,Away,Chelsea,xG_ag,4.1,8455
+148,149,Away,Newcastle Utd,xG_ag,3.3,10261
+149,150,Away,West Ham,xG_ag,1.8,8654
+150,151,Away,Liverpool,xG_ag,1.7,8650
+151,152,Away,Bournemouth,xG_ag,1.1,8678
+152,153,Away,Nott'ham Forest,xG_ag,1.2,10203
+153,154,Away,Burnley,xG_ag,2.6,8191
+154,155,Away,Brentford,xG_ag,0.8,9937
+155,156,Away,Arsenal,xG_ag,0.6,9825
+156,157,Away,Chelsea,xG_ag,1.2,8455
+157,158,Away,West Ham,xG_ag,2.3,8654
+158,159,Away,Manchester City,xG_ag,0.3,8456
+159,160,Away,Newcastle Utd,xG_ag,3.8,10261
+160,161,Away,Tottenham,xG_ag,1.3,8586
+161,162,Away,Crystal Palace,xG_ag,1.6,9826
+162,163,Away,Sheffield Utd,xG_ag,3.1,8657
+163,164,Away,Fulham,xG_ag,3.5,9879
+164,165,Away,Luton Town,xG_ag,,8346
+165,166,Away,Everton,xG_ag,0.7,8668
+166,167,Away,Aston Villa,xG_ag,0.5,10252
+167,168,Away,Wolves,xG_ag,1.1,8602
+168,169,Away,Brighton,xG_ag,2.3,10204
+169,170,Away,Manchester Utd,xG_ag,2.3,10260
+170,171,Away,Brighton,xG_ag,1.3,10204
+171,172,Away,Sheffield Utd,xG_ag,0.9,8657
+172,173,Away,Manchester Utd,xG_ag,1.2,10260
+173,174,Away,Newcastle Utd,xG_ag,1.4,10261
+174,175,Away,Burnley,xG_ag,1.3,8191
+175,176,Away,Everton,xG_ag,1.5,8668
+176,177,Away,Bournemouth,xG_ag,1.0,8678
+177,178,Away,Arsenal,xG_ag,1.0,9825
+178,179,Away,Chelsea,xG_ag,1.3,8455
+179,180,Away,Nott'ham Forest,xG_ag,2.4,10203
+180,181,Away,Fulham,xG_ag,1.8,9879
+181,182,Away,Luton Town,xG_ag,2.4,8346
+182,183,Away,Liverpool,xG_ag,0.8,8650
+183,184,Away,Aston Villa,xG_ag,1.1,10252
+184,185,Away,Crystal Palace,xG_ag,2.6,9826
+185,186,Away,Wolves,xG_ag,2.2,8602
+186,187,Away,Manchester City,xG_ag,1.0,8456
+187,188,Away,Tottenham,xG_ag,3.2,8586
+188,189,Away,West Ham,xG_ag,2.7,8654
+189,190,Away,Chelsea,xG_ag,2.3,8455
+190,191,Away,Burnley,xG_ag,3.2,8191
+191,192,Away,Everton,xG_ag,1.9,8668
+192,193,Away,Sheffield Utd,xG_ag,2.2,8657
+193,194,Away,Brentford,xG_ag,1.0,9937
+194,195,Away,Manchester Utd,xG_ag,0.7,10260
+195,196,Away,Bournemouth,xG_ag,2.3,8678
+196,197,Away,Arsenal,xG_ag,1.2,9825
+197,198,Away,Newcastle Utd,xG_ag,7.0,10261
+198,199,Away,Brighton,xG_ag,0.7,10204
+199,200,Away,Luton Town,xG_ag,1.1,8346
+200,201,Away,Fulham,xG_ag,2.2,9879
+201,202,Away,Manchester City,xG_ag,1.3,8456
+202,203,Away,Aston Villa,xG_ag,1.1,10252
+203,204,Away,Tottenham,xG_ag,0.8,8586
+204,205,Away,Crystal Palace,xG_ag,3.1,9826
+205,206,Away,Nott'ham Forest,xG_ag,1.2,10203
+206,207,Away,West Ham,xG_ag,2.5,8654
+207,208,Away,Liverpool,xG_ag,1.4,8650
+208,209,Away,Wolves,xG_ag,1.0,8602
+209,1,Away,Manchester City,xG_for,1.9,8456
+210,2,Away,Nott'ham Forest,xG_for,1.2,10203
+211,3,Away,Fulham,xG_for,1.5,9879
+212,4,Away,Crystal Palace,xG_for,1.9,9826
+213,5,Away,Luton Town,xG_for,1.5,8346
+214,6,Away,West Ham,xG_for,1.1,8654
+215,7,Away,Aston Villa,xG_for,1.8,10252
+216,8,Away,Tottenham,xG_for,1.3,8586
+217,9,Away,Liverpool,xG_for,1.3,8650
+218,10,Away,Wolves,xG_for,2.2,8602
+219,11,Away,Sheffield Utd,xG_for,0.5,8657
+220,12,Away,Brentford,xG_for,3.7,9937
+221,13,Away,Bournemouth,xG_for,1.3,8678
+222,14,Away,Brighton,xG_for,2.2,10204
+223,15,Away,Manchester Utd,xG_for,2.1,10260
+224,16,Away,Newcastle Utd,xG_for,0.3,10261
+225,17,Away,Everton,xG_for,0.6,8668
+226,18,Away,Chelsea,xG_for,2.5,8455
+227,19,Away,Arsenal,xG_for,2.0,9825
+228,20,Away,Luton Town,xG_for,0.4,8346
+229,21,Away,Tottenham,xG_for,2.1,8586
+230,22,Away,Wolves,xG_for,1.1,8602
+231,23,Away,Crystal Palace,xG_for,0.8,9826
+232,24,Away,Nott'ham Forest,xG_for,1.2,10203
+233,25,Away,Fulham,xG_for,0.6,9879
+234,26,Away,West Ham,xG_for,3.0,8654
+235,27,Away,Manchester City,xG_for,3.5,8456
+236,28,Away,Aston Villa,xG_for,2.5,10252
+237,29,Away,Liverpool,xG_for,0.9,8650
+238,30,Away,West Ham,xG_for,1.0,8654
+239,31,Away,Everton,xG_for,2.5,8668
+240,32,Away,Nott'ham Forest,xG_for,0.8,10203
+241,33,Away,Fulham,xG_for,1.4,9879
+242,34,Away,Bournemouth,xG_for,2.1,8678
+243,35,Away,Tottenham,xG_for,2.2,8586
+244,36,Away,Newcastle Utd,xG_for,1.2,10261
+245,37,Away,Aston Villa,xG_for,0.7,10252
+246,38,Away,Wolves,xG_for,1.2,8602
+247,39,Away,Manchester Utd,xG_for,0.9,10260
+248,40,Away,Liverpool,xG_for,2.5,8650
+249,41,Away,Luton Town,xG_for,1.1,8346
+250,42,Away,Manchester City,xG_for,3.6,8456
+251,43,Away,Crystal Palace,xG_for,1.2,9826
+252,44,Away,Brighton,xG_for,1.7,10204
+253,45,Away,Sheffield Utd,xG_for,0.7,8657
+254,46,Away,Brentford,xG_for,0.5,9937
+255,47,Away,Chelsea,xG_for,1.8,8455
+256,48,Away,Arsenal,xG_for,1.0,9825
+257,49,Away,Burnley,xG_for,0.5,8191
+258,50,Away,Nott'ham Forest,xG_for,1.0,10203
+259,51,Away,Wolves,xG_for,0.6,8602
+260,52,Away,Fulham,xG_for,0.6,9879
+261,53,Away,Everton,xG_for,1.9,8668
+262,54,Away,Manchester Utd,xG_for,1.0,10260
+263,55,Away,Tottenham,xG_for,1.4,8586
+264,56,Away,Bournemouth,xG_for,1.1,8678
+265,57,Away,Aston Villa,xG_for,1.0,10252
+266,58,Away,West Ham,xG_for,1.1,8654
+267,59,Away,Newcastle Utd,xG_for,3.9,10261
+268,60,Away,Brighton,xG_for,1.7,10204
+269,61,Away,Manchester City,xG_for,0.9,8456
+270,62,Away,Arsenal,xG_for,3.4,9825
+271,63,Away,Luton Town,xG_for,0.9,8346
+272,64,Away,Burnley,xG_for,0.6,8191
+273,65,Away,Sheffield Utd,xG_for,1.1,8657
+274,66,Away,Crystal Palace,xG_for,0.9,9826
+275,67,Away,Liverpool,xG_for,1.3,8650
+276,68,Away,Brentford,xG_for,1.6,9937
+277,69,Away,Chelsea,xG_for,1.7,8455
+278,70,Away,Burnley,xG_for,1.1,8191
+279,71,Away,Tottenham,xG_for,1.9,8586
+280,72,Away,Bournemouth,xG_for,0.7,8678
+281,73,Away,Brentford,xG_for,0.9,9937
+282,74,Away,Chelsea,xG_for,1.9,8455
+283,75,Away,Sheffield Utd,xG_for,0.6,8657
+284,76,Away,Nott'ham Forest,xG_for,1.0,10203
+285,77,Away,Newcastle Utd,xG_for,2.0,10261
+286,78,Away,Aston Villa,xG_for,1.6,10252
+287,79,Away,Liverpool,xG_for,2.3,8650
+288,80,Away,Manchester City,xG_for,0.5,8456
+289,81,Away,Everton,xG_for,0.1,8668
+290,82,Away,Wolves,xG_for,2.4,8602
+291,83,Away,Crystal Palace,xG_for,1.2,9826
+292,84,Away,Burnley,xG_for,1.1,8191
+293,85,Away,Brighton,xG_for,0.8,10204
+294,86,Away,Luton Town,xG_for,1.7,8346
+295,87,Away,Arsenal,xG_for,1.0,9825
+296,88,Away,Manchester Utd,xG_for,1.1,10260
+297,89,Away,West Ham,xG_for,1.1,8654
+298,90,Away,Fulham,xG_for,1.0,9879
+299,91,Away,Tottenham,xG_for,1.1,8586
+300,92,Away,Brentford,xG_for,2.2,9937
+301,93,Away,Burnley,xG_for,0.8,8191
+302,94,Away,Sheffield Utd,xG_for,0.0,8657
+303,95,Away,Newcastle Utd,xG_for,2.2,10261
+304,96,Away,Everton,xG_for,0.8,8668
+305,97,Away,Nott'ham Forest,xG_for,0.4,10203
+306,98,Away,Fulham,xG_for,0.7,9879
+307,99,Away,Luton Town,xG_for,0.5,8346
+308,100,Away,Manchester City,xG_for,4.0,8456
+309,101,Away,Manchester Utd,xG_for,0.7,10260
+310,102,Away,West Ham,xG_for,1.8,8654
+311,103,Away,Brighton,xG_for,0.5,10204
+312,104,Away,Crystal Palace,xG_for,1.3,9826
+313,105,Away,Bournemouth,xG_for,0.9,8678
+314,106,Away,Wolves,xG_for,1.2,8602
+315,107,Away,Arsenal,xG_for,0.6,9825
+316,108,Away,Aston Villa,xG_for,1.2,10252
+317,109,Away,Liverpool,xG_for,2.6,8650
+318,110,Away,Chelsea,xG_for,4.1,8455
+319,111,Away,Tottenham,xG_for,0.7,8586
+320,112,Away,Burnley,xG_for,0.3,8191
+321,113,Away,Luton Town,xG_for,0.4,8346
+322,114,Away,Everton,xG_for,1.5,8668
+323,115,Away,Newcastle Utd,xG_for,0.5,10261
+324,116,Away,Nott'ham Forest,xG_for,1.7,10203
+325,117,Away,Brentford,xG_for,1.6,9937
+326,118,Away,Fulham,xG_for,0.9,9879
+327,119,Away,Sheffield Utd,xG_for,1.1,8657
+328,120,Away,Manchester City,xG_for,2.9,8456
+329,121,Away,Liverpool,xG_for,0.6,8650
+330,122,Away,West Ham,xG_for,0.9,8654
+331,123,Away,Brighton,xG_for,1.3,10204
+332,124,Away,Bournemouth,xG_for,2.9,8678
+333,125,Away,Chelsea,xG_for,0.5,8455
+334,126,Away,Crystal Palace,xG_for,1.6,9826
+335,127,Away,Arsenal,xG_for,1.6,9825
+336,128,Away,Aston Villa,xG_for,1.7,10252
+337,129,Away,Manchester Utd,xG_for,2.2,10260
+338,130,Away,Wolves,xG_for,1.4,8602
+339,131,Away,Luton Town,xG_for,0.2,8346
+340,132,Away,Wolves,xG_for,0.7,8602
+341,133,Away,Sheffield Utd,xG_for,0.4,8657
+342,134,Away,Everton,xG_for,0.7,8668
+343,135,Away,Manchester Utd,xG_for,0.5,10260
+344,136,Away,Aston Villa,xG_for,0.7,10252
+345,137,Away,Fulham,xG_for,1.2,9879
+346,138,Away,Brighton,xG_for,1.1,10204
+347,139,Away,Crystal Palace,xG_for,0.9,9826
+348,140,Away,Tottenham,xG_for,0.5,8586
+349,141,Away,Burnley,xG_for,0.9,8191
+350,142,Away,Arsenal,xG_for,2.2,9825
+351,143,Away,Liverpool,xG_for,1.7,8650
+352,144,Away,Bournemouth,xG_for,1.8,8678
+353,145,Away,Brentford,xG_for,1.5,9937
+354,146,Away,Nott'ham Forest,xG_for,0.3,10203
+355,147,Away,Manchester City,xG_for,0.6,8456
+356,148,Away,Chelsea,xG_for,1.5,8455
+357,149,Away,Newcastle Utd,xG_for,1.5,10261
+358,150,Away,West Ham,xG_for,2.2,8654
+359,151,Away,Liverpool,xG_for,1.2,8650
+360,152,Away,Bournemouth,xG_for,1.5,8678
+361,153,Away,Nott'ham Forest,xG_for,1.3,10203
+362,154,Away,Burnley,xG_for,0.6,8191
+363,155,Away,Brentford,xG_for,0.6,9937
+364,156,Away,Arsenal,xG_for,1.4,9825
+365,157,Away,Chelsea,xG_for,0.9,8455
+366,158,Away,West Ham,xG_for,1.3,8654
+367,159,Away,Manchester City,xG_for,1.6,8456
+368,160,Away,Newcastle Utd,xG_for,1.7,10261
+369,161,Away,Tottenham,xG_for,1.5,8586
+370,162,Away,Crystal Palace,xG_for,1.8,9826
+371,163,Away,Sheffield Utd,xG_for,0.4,8657
+372,164,Away,Fulham,xG_for,0.3,9879
+373,165,Away,Luton Town,xG_for,,8346
+374,166,Away,Everton,xG_for,1.4,8668
+375,167,Away,Aston Villa,xG_for,1.4,10252
+376,168,Away,Wolves,xG_for,0.7,8602
+377,169,Away,Brighton,xG_for,0.7,10204
+378,170,Away,Manchester Utd,xG_for,0.8,10260
+379,171,Away,Brighton,xG_for,1.2,10204
+380,172,Away,Sheffield Utd,xG_for,0.6,8657
+381,173,Away,Manchester Utd,xG_for,1.0,10260
+382,174,Away,Newcastle Utd,xG_for,1.4,10261
+383,175,Away,Burnley,xG_for,0.4,8191
+384,176,Away,Everton,xG_for,1.8,8668
+385,177,Away,Bournemouth,xG_for,1.6,8678
+386,178,Away,Arsenal,xG_for,0.7,9825
+387,179,Away,Chelsea,xG_for,2.0,8455
+388,180,Away,Nott'ham Forest,xG_for,3.5,10203
+389,181,Away,Fulham,xG_for,0.3,9879
+390,182,Away,Luton Town,xG_for,0.6,8346
+391,183,Away,Liverpool,xG_for,1.8,8650
+392,184,Away,Aston Villa,xG_for,1.7,10252
+393,185,Away,Crystal Palace,xG_for,1.1,9826
+394,186,Away,Wolves,xG_for,2.4,8602
+395,187,Away,Manchester City,xG_for,2.4,8456
+396,188,Away,Tottenham,xG_for,2.3,8586
+397,189,Away,West Ham,xG_for,1.4,8654
+398,190,Away,Chelsea,xG_for,1.5,8455
+399,191,Away,Burnley,xG_for,1.2,8191
+400,192,Away,Everton,xG_for,0.4,8668
+401,193,Away,Sheffield Utd,xG_for,0.3,8657
+402,194,Away,Brentford,xG_for,1.4,9937
+403,195,Away,Manchester Utd,xG_for,0.8,10260
+404,196,Away,Bournemouth,xG_for,1.7,8678
+405,197,Away,Arsenal,xG_for,1.6,9825
+406,198,Away,Newcastle Utd,xG_for,0.6,10261
+407,199,Away,Brighton,xG_for,2.3,10204
+408,200,Away,Luton Town,xG_for,0.9,8346
+409,201,Away,Fulham,xG_for,0.8,9879
+410,202,Away,Manchester City,xG_for,3.0,8456
+411,203,Away,Aston Villa,xG_for,1.2,10252
+412,204,Away,Tottenham,xG_for,1.2,8586
+413,205,Away,Crystal Palace,xG_for,0.3,9826
+414,206,Away,Nott'ham Forest,xG_for,1.2,10203
+415,207,Away,West Ham,xG_for,2.3,8654
+416,208,Away,Liverpool,xG_for,1.5,8650
+417,209,Away,Wolves,xG_for,1.1,8602

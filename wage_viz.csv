@@ -1,0 +1,418 @@
+,Name,Age,new_pound_value,team_id,team,Wage_Bin,Count
+0,Rhian Brewster,23.0,35000,8657,Sheffield Utd,£10k-£50k,20
+1,Tom Davies,25.0,30000,8657,Sheffield Utd,£10k-£50k,20
+2,Cameron Archer,22.0,30000,8657,Sheffield Utd,£10k-£50k,20
+3,Gustavo Hamer,26.0,30000,8657,Sheffield Utd,£10k-£50k,20
+4,Oliver McBurnie,27.0,25000,8657,Sheffield Utd,£10k-£50k,20
+5,Auston Trusty,24.0,25000,8657,Sheffield Utd,£10k-£50k,20
+6,John Fleck,31.0,25000,8657,Sheffield Utd,£10k-£50k,20
+7,Adam Davies,31.0,25000,8657,Sheffield Utd,£10k-£50k,20
+8,Jack Robinson,29.0,25000,8657,Sheffield Utd,£10k-£50k,20
+9,Jayden Bogle,23.0,20000,8657,Sheffield Utd,£10k-£50k,20
+10,Oliver Norwood,32.0,20000,8657,Sheffield Utd,£10k-£50k,20
+11,Jordan Amissah,22.0,20000,8657,Sheffield Utd,£10k-£50k,20
+12,Ben Osborn,28.0,20000,8657,Sheffield Utd,£10k-£50k,20
+13,Chris Basham,35.0,15000,8657,Sheffield Utd,£10k-£50k,20
+14,James McAtee,20.0,15000,8657,Sheffield Utd,£10k-£50k,20
+15,John Egan,30.0,12500,8657,Sheffield Utd,£10k-£50k,20
+16,William Osula,20.0,12500,8657,Sheffield Utd,£10k-£50k,20
+17,George Baldock,30.0,10000,8657,Sheffield Utd,<£10k,17
+18,Max Lowe,26.0,10000,8657,Sheffield Utd,<£10k,17
+19,Yasser Larouci,22.0,10000,8657,Sheffield Utd,<£10k,17
+20,Femi Seriki,21.0,10000,8657,Sheffield Utd,<£10k,17
+21,Rhys Norrington-Davies,24.0,4000,8657,Sheffield Utd,<£10k,17
+22,Daniel Jebbison,20.0,4000,8657,Sheffield Utd,<£10k,17
+23,Kai Havertz,24.0,280000,9825,Arsenal,£200k+,5
+24,Gabriel Jesus,26.0,265000,9825,Arsenal,£200k+,5
+25,Declan Rice,24.0,240000,9825,Arsenal,£200k+,5
+26,Martin Ødegaard,24.0,240000,9825,Arsenal,£200k+,5
+27,Thomas Partey,30.0,200000,9825,Arsenal,£150k-£200k,6
+28,Bukayo Saka,21.0,195000,9825,Arsenal,£150k-£200k,6
+29,William Saliba,22.0,190000,9825,Arsenal,£150k-£200k,6
+30,Gabriel Martinelli,22.0,180000,9825,Arsenal,£150k-£200k,6
+31,Oleksandr Zinchenko,26.0,150000,9825,Arsenal,£100k-£150k,11
+32,Ben White,25.0,120000,9825,Arsenal,£100k-£150k,11
+33,Aaron Ramsdale,25.0,120000,9825,Arsenal,£100k-£150k,11
+34,Jorginho,31.0,110000,9825,Arsenal,£100k-£150k,11
+35,Reiss Nelson,23.0,100000,9825,Arsenal,£80k-£100k,14
+36,Leandro Trossard,28.0,90000,9825,Arsenal,£80k-£100k,14
+37,David Raya,27.0,85000,9825,Arsenal,£80k-£100k,14
+38,Cédric Soares,31.0,75000,9825,Arsenal,£50k-£80k,17
+39,Jakub Kiwior,23.0,58000,9825,Arsenal,£50k-£80k,17
+40,Mohamed Elneny,31.0,55000,9825,Arsenal,£50k-£80k,17
+41,Takehiro Tomiyasu,24.0,55000,9825,Arsenal,£50k-£80k,17
+42,Fabio Vieira,23.0,45000,9825,Arsenal,£10k-£50k,20
+43,Emile Smith Rowe,23.0,40000,9825,Arsenal,£10k-£50k,20
+44,Casemiro,31.0,350000,10260,Manchester Utd,£200k+,5
+45,Raphaël Varane,30.0,340000,10260,Manchester Utd,£200k+,5
+46,Marcus Rashford,25.0,300000,10260,Manchester Utd,£200k+,5
+47,Mason Mount,24.0,250000,10260,Manchester Utd,£200k+,5
+48,Anthony Martial,27.0,250000,10260,Manchester Utd,£200k+,5
+49,Bruno Fernandes,28.0,240000,10260,Manchester Utd,£200k+,5
+50,Antony,23.0,200000,10260,Manchester Utd,£150k-£200k,6
+51,Harry Maguire,30.0,190000,10260,Manchester Utd,£150k-£200k,6
+52,Luke Shaw,28.0,150000,10260,Manchester Utd,£100k-£150k,11
+53,Christian Eriksen,31.0,150000,10260,Manchester Utd,£100k-£150k,11
+54,Aaron Wan-Bissaka,25.0,90000,10260,Manchester Utd,£80k-£100k,14
+55,Rasmus Højlund,20.0,85000,10260,Manchester Utd,£80k-£100k,14
+56,Diogo Dalot,24.0,85000,10260,Manchester Utd,£80k-£100k,14
+57,Tyrell Malacia,24.0,75000,10260,Manchester Utd,£50k-£80k,17
+58,Jonny Evans,35.0,65000,10260,Manchester Utd,£50k-£80k,17
+59,Sofyan Amrabat,26.0,65000,10260,Manchester Utd,£50k-£80k,17
+60,Scott McTominay,26.0,60000,10260,Manchester Utd,£50k-£80k,17
+61,Alejandro Garnacho,19.0,50000,10260,Manchester Utd,£10k-£50k,20
+62,Tom Heaton,37.0,45000,10260,Manchester Utd,£10k-£50k,20
+63,Facundo Pellistri,21.0,20000,10260,Manchester Utd,£10k-£50k,20
+64,Kobbie Mainoo,18.0,10000,10260,Manchester Utd,<£10k,17
+65,Raheem Sterling,28.0,325000,8455,Chelsea,£200k+,5
+66,Reece James,23.0,250000,8455,Chelsea,£200k+,5
+67,Wesley Fofana,22.0,200000,8455,Chelsea,£150k-£200k,6
+68,Ben Chilwell,26.0,200000,8455,Chelsea,£150k-£200k,6
+69,Christopher Nkunku,25.0,195000,8455,Chelsea,£150k-£200k,6
+70,Enzo Fernández,22.0,180000,8455,Chelsea,£150k-£200k,6
+71,Marc Cucurella,25.0,175000,8455,Chelsea,£150k-£200k,6
+72,Moisés Caicedo,21.0,150000,8455,Chelsea,£100k-£150k,11
+73,Malang Sarr,24.0,120000,8455,Chelsea,£100k-£150k,11
+74,Thiago Silva,38.0,110000,8455,Chelsea,£100k-£150k,11
+75,Carney Chukwuemeka,19.0,100000,8455,Chelsea,£80k-£100k,14
+76,Levi Colwill,20.0,100000,8455,Chelsea,£80k-£100k,14
+77,Axel Disasi,25.0,80000,8455,Chelsea,£50k-£80k,17
+78,Cole Palmer,21.0,75000,8455,Chelsea,£50k-£80k,17
+79,Nicolas Jackson,22.0,65000,8455,Chelsea,£50k-£80k,17
+80,Robert Sánchez,25.0,60000,8455,Chelsea,£50k-£80k,17
+81,Conor Gallagher,23.0,50000,8455,Chelsea,£10k-£50k,20
+82,Noni Madueke,21.0,50000,8455,Chelsea,£10k-£50k,20
+83,Trevoh Chalobah,24.0,50000,8455,Chelsea,£10k-£50k,20
+84,Malo Gusto,20.0,45000,8455,Chelsea,£10k-£50k,20
+85,Lesley Ugochukwu,19.0,45000,8455,Chelsea,£10k-£50k,20
+86,Armando Broja,21.0,40000,8455,Chelsea,£10k-£50k,20
+87,Marcus Bettinelli,31.0,35000,8455,Chelsea,£10k-£50k,20
+88,Andrey Santos,19.0,10000,8455,Chelsea,<£10k,17
+89,James Maddison,26.0,170000,8586,Tottenham,£150k-£200k,6
+90,Cristian Romero,25.0,165000,8586,Tottenham,£150k-£200k,6
+91,Dejan Kulusevski,23.0,110000,8586,Tottenham,£100k-£150k,11
+92,Richarlison,26.0,90000,8586,Tottenham,£80k-£100k,14
+93,Pedro Porro,23.0,85000,8586,Tottenham,£80k-£100k,14
+94,Ben Davies,30.0,80000,8586,Tottenham,£50k-£80k,17
+95,Guglielmo Vicario,26.0,75000,8586,Tottenham,£50k-£80k,17
+96,Fraser Forster,35.0,75000,8586,Tottenham,£50k-£80k,17
+97,Rodrigo Bentancur,26.0,75000,8586,Tottenham,£50k-£80k,17
+98,Giovani Lo Celso,27.0,70000,8586,Tottenham,£50k-£80k,17
+99,Brennan Johnson,22.0,70000,8586,Tottenham,£50k-£80k,17
+100,Manor Solomon,24.0,60000,8586,Tottenham,£50k-£80k,17
+101,Ryan Sessegnon,23.0,55000,8586,Tottenham,£50k-£80k,17
+102,Yves Bissouma,26.0,55000,8586,Tottenham,£50k-£80k,17
+103,Micky van de Ven,22.0,50000,8586,Tottenham,£10k-£50k,20
+104,Oliver Skipp,22.0,40000,8586,Tottenham,£10k-£50k,20
+105,Bryan Gil,22.0,40000,8586,Tottenham,£10k-£50k,20
+106,Brandon Austin,24.0,7500,8586,Tottenham,<£10k,17
+107,Alfie Whiteman,24.0,7500,8586,Tottenham,<£10k,17
+108,Emerson,24.0,40000,8654,West Ham,£10k-£50k,20
+109,Kalvin Phillips,27.0,150000,8654,West Ham,£100k-£150k,11
+110,Lucas Paquetá,25.0,150000,8654,West Ham,£100k-£150k,11
+111,Kurt Zouma,28.0,125000,8654,West Ham,£100k-£150k,11
+112,Danny Ings,31.0,125000,8654,West Ham,£100k-£150k,11
+113,Alphonse Areola,30.0,120000,8654,West Ham,£100k-£150k,11
+114,Jarrod Bowen,26.0,120000,8654,West Ham,£100k-£150k,11
+115,James Ward-Prowse,28.0,115000,8654,West Ham,£100k-£150k,11
+116,Edson Álvarez,25.0,100000,8654,West Ham,£80k-£100k,14
+117,Mohammed Kudus,23.0,90000,8654,West Ham,£80k-£100k,14
+118,Michail Antonio,33.0,85000,8654,West Ham,£80k-£100k,14
+119,Angelo Ogbonna,35.0,70000,8654,West Ham,£50k-£80k,17
+120,Pablo Fornals,27.0,65000,8654,West Ham,£50k-£80k,17
+121,Maxwel Cornet,26.0,65000,8654,West Ham,£50k-£80k,17
+122,Aaron Cresswell,33.0,50000,8654,West Ham,£10k-£50k,20
+123,Konstantinos Mavropanos,25.0,50000,8654,West Ham,£10k-£50k,20
+124,Nayef Aguerd,27.0,50000,8654,West Ham,£10k-£50k,20
+125,Ben Johnson,23.0,20000,8654,West Ham,£10k-£50k,20
+126,Joseph Anang,23.0,4000,8654,West Ham,<£10k,17
+127,Divin Mubama,18.0,4000,8654,West Ham,<£10k,17
+128,Adam Lallana,35.0,90000,10204,Brighton,£80k-£100k,14
+129,Kaoru Mitoma,26.0,80000,10204,Brighton,£50k-£80k,17
+130,Lewis Dunk,31.0,80000,10204,Brighton,£50k-£80k,17
+131,James Milner,37.0,60000,10204,Brighton,£50k-£80k,17
+132,Danny Welbeck,32.0,55000,10204,Brighton,£50k-£80k,17
+133,Adam Webster,28.0,55000,10204,Brighton,£50k-£80k,17
+134,Mahmoud Dahoud,27.0,55000,10204,Brighton,£50k-£80k,17
+135,Solly March,29.0,50000,10204,Brighton,£10k-£50k,20
+136,Igor,25.0,45000,10204,Brighton,£10k-£50k,20
+137,Tariq Lamptey,22.0,35000,10204,Brighton,£10k-£50k,20
+138,Bart Verbruggen,20.0,35000,10204,Brighton,£10k-£50k,20
+139,Jan Paul van Hecke,23.0,30000,10204,Brighton,£10k-£50k,20
+140,Evan Ferguson,18.0,30000,10204,Brighton,£10k-£50k,20
+141,Jason Steele,32.0,20000,10204,Brighton,£10k-£50k,20
+142,Billy Gilmour,22.0,20000,10204,Brighton,£10k-£50k,20
+143,Facundo Buonanotte,18.0,15000,10204,Brighton,£10k-£50k,20
+144,Carlos Baleba,19.0,12500,10204,Brighton,£10k-£50k,20
+145,Simon Adingra,21.0,12500,10204,Brighton,£10k-£50k,20
+146,Jakub Moder,24.0,10000,10204,Brighton,<£10k,17
+147,Youri Tielemans,26.0,150000,10252,Aston Villa,£100k-£150k,11
+148,Boubacar Kamara,23.0,150000,10252,Aston Villa,£100k-£150k,11
+149,Ollie Watkins,27.0,130000,10252,Aston Villa,£100k-£150k,11
+150,Moussa Diaby,24.0,130000,10252,Aston Villa,£100k-£150k,11
+151,Lucas Digne,30.0,120000,10252,Aston Villa,£100k-£150k,11
+152,John McGinn,28.0,120000,10252,Aston Villa,£100k-£150k,11
+153,Diego Carlos,30.0,100000,10252,Aston Villa,£80k-£100k,14
+154,Leon Bailey,25.0,100000,10252,Aston Villa,£80k-£100k,14
+155,Tyrone Mings,30.0,100000,10252,Aston Villa,£80k-£100k,14
+156,Pau Torres,26.0,100000,10252,Aston Villa,£80k-£100k,14
+157,Matty Cash,25.0,80000,10252,Aston Villa,£50k-£80k,17
+158,Bertrand Traoré,27.0,77885,10252,Aston Villa,£50k-£80k,17
+159,Ezri Konsa,25.0,75000,10252,Aston Villa,£50k-£80k,17
+160,Douglas Luiz,25.0,75000,10252,Aston Villa,£50k-£80k,17
+161,Jacob Ramsey,22.0,70000,10252,Aston Villa,£50k-£80k,17
+162,Robin Olsen,33.0,50000,10252,Aston Villa,£10k-£50k,20
+163,Calum Chambers,28.0,50000,10252,Aston Villa,£10k-£50k,20
+164,Álex Moreno,30.0,35000,10252,Aston Villa,£10k-£50k,20
+165,Eberechi Eze,25.0,100000,9826,Crystal Palace,£80k-£100k,14
+166,Michael Olise,21.0,100000,9826,Crystal Palace,£80k-£100k,14
+167,Dean Henderson,26.0,100000,9826,Crystal Palace,£80k-£100k,14
+168,Nathaniel Clyne,32.0,80000,9826,Crystal Palace,£50k-£80k,17
+169,Joachim Andersen,27.0,80000,9826,Crystal Palace,£50k-£80k,17
+170,Jefferson Lerma,28.0,70000,9826,Crystal Palace,£50k-£80k,17
+171,Chris Richards,23.0,55000,9826,Crystal Palace,£50k-£80k,17
+172,Jean-Philippe Mateta,26.0,50000,9826,Crystal Palace,£10k-£50k,20
+173,Jeffrey Schlupp,30.0,50000,9826,Crystal Palace,£10k-£50k,20
+174,James Tomkins,34.0,50000,9826,Crystal Palace,£10k-£50k,20
+175,Rob Holding,27.0,45000,9826,Crystal Palace,£10k-£50k,20
+176,Tyrick Mitchell,23.0,40000,9826,Crystal Palace,£10k-£50k,20
+177,Sam Johnstone,30.0,40000,9826,Crystal Palace,£10k-£50k,20
+178,Joel Ward,33.0,35000,9826,Crystal Palace,£10k-£50k,20
+179,Will Hughes,28.0,35000,9826,Crystal Palace,£10k-£50k,20
+180,Nathan Ferguson,22.0,25000,9826,Crystal Palace,£10k-£50k,20
+181,Jordan Ayew,31.0,25000,9826,Crystal Palace,£10k-£50k,20
+182,Naouirou Ahamada,21.0,20000,9826,Crystal Palace,£10k-£50k,20
+183,Malcolm Ebiowei,19.0,10000,9826,Crystal Palace,<£10k,17
+184,Jesurun Rak-Sakyi,20.0,7500,9826,Crystal Palace,<£10k,17
+185,Remi Matthews,29.0,5385,9826,Crystal Palace,<£10k,17
+186,Kevin De Bruyne,32.0,400000,8456,Manchester City,£200k+,5
+187,Erling Haaland,23.0,375000,8456,Manchester City,£200k+,5
+188,Bernardo Silva,28.0,300000,8456,Manchester City,£200k+,5
+189,Jack Grealish,27.0,300000,8456,Manchester City,£200k+,5
+190,John Stones,29.0,250000,8456,Manchester City,£200k+,5
+191,Phil Foden,23.0,225000,8456,Manchester City,£200k+,5
+192,Rodri,27.0,220000,8456,Manchester City,£200k+,5
+193,Manuel Akanji,28.0,180000,8456,Manchester City,£150k-£200k,6
+194,Kyle Walker,33.0,175000,8456,Manchester City,£150k-£200k,6
+195,Nathan Aké,28.0,160000,8456,Manchester City,£150k-£200k,6
+196,Matheus Nunes,24.0,130000,8456,Manchester City,£100k-£150k,11
+197,Julián Álvarez,23.0,100000,8456,Manchester City,£80k-£100k,14
+198,Stefan Ortega,30.0,55000,8456,Manchester City,£50k-£80k,17
+199,Scott Carson,37.0,30000,8456,Manchester City,£10k-£50k,20
+200,Rico Lewis,18.0,25000,8456,Manchester City,£10k-£50k,20
+201,Oscar Bobb,20.0,8000,8456,Manchester City,<£10k,17
+202,Alexander Isak,23.0,120000,10261,Newcastle Utd,£100k-£150k,11
+203,Kieran Trippier,32.0,120000,10261,Newcastle Utd,£100k-£150k,11
+204,Matt Targett,27.0,100000,10261,Newcastle Utd,£80k-£100k,14
+205,Sven Botman,23.0,90000,10261,Newcastle Utd,£80k-£100k,14
+206,Joelinton,26.0,85000,10261,Newcastle Utd,£80k-£100k,14
+207,Harvey Barnes,25.0,80000,10261,Newcastle Utd,£50k-£80k,17
+208,Nick Pope,31.0,60000,10261,Newcastle Utd,£50k-£80k,17
+209,Anthony Gordon,22.0,60000,10261,Newcastle Utd,£50k-£80k,17
+210,Emil Krafth,28.0,55000,10261,Newcastle Utd,£50k-£80k,17
+211,Sean Longstaff,25.0,50000,10261,Newcastle Utd,£10k-£50k,20
+212,Valentino Livramento,20.0,50000,10261,Newcastle Utd,£10k-£50k,20
+213,Callum Wilson,31.0,46000,10261,Newcastle Utd,£10k-£50k,20
+214,Matt Ritchie,33.0,45000,10261,Newcastle Utd,£10k-£50k,20
+215,Jamaal Lascelles,29.0,40000,10261,Newcastle Utd,£10k-£50k,20
+216,Fabian Schär,31.0,40000,10261,Newcastle Utd,£10k-£50k,20
+217,Paul Dummett,31.0,35000,10261,Newcastle Utd,£10k-£50k,20
+218,Jacob Murphy,28.0,35000,10261,Newcastle Utd,£10k-£50k,20
+219,Elliot Anderson,20.0,30000,10261,Newcastle Utd,£10k-£50k,20
+220,Mark Gillespie,31.0,10000,10261,Newcastle Utd,<£10k,17
+221,Loris Karius,30.0,10000,10261,Newcastle Utd,<£10k,17
+222,Lewis Hall,18.0,7000,10261,Newcastle Utd,<£10k,17
+223,Lewis Miley,17.0,5000,10261,Newcastle Utd,<£10k,17
+224,Mohamed Salah,31.0,350000,8650,Liverpool,£200k+,5
+225,Virgil van Dijk,32.0,220000,8650,Liverpool,£200k+,5
+226,Thiago Alcántara,32.0,200000,8650,Liverpool,£150k-£200k,6
+227,Trent Alexander-Arnold,24.0,180000,8650,Liverpool,£150k-£200k,6
+228,Alexis Mac Allister,24.0,150000,8650,Liverpool,£100k-£150k,11
+229,Ryan Gravenberch,21.0,150000,8650,Liverpool,£100k-£150k,11
+230,Diogo Jota,26.0,140000,8650,Liverpool,£100k-£150k,11
+231,Cody Gakpo,24.0,120000,8650,Liverpool,£100k-£150k,11
+232,Dominik Szoboszlai,22.0,120000,8650,Liverpool,£100k-£150k,11
+233,Andrew Robertson,29.0,100000,8650,Liverpool,£80k-£100k,14
+234,Ibrahima Konaté,24.0,70000,8650,Liverpool,£50k-£80k,17
+235,Wataru Endo,30.0,50000,8650,Liverpool,£10k-£50k,20
+236,Stefan Bajcetic,18.0,40000,8650,Liverpool,£10k-£50k,20
+237,Harvey Elliott,20.0,40000,8650,Liverpool,£10k-£50k,20
+238,Curtis Jones,22.0,15000,8650,Liverpool,£10k-£50k,20
+239,Willian,34.0,90000,9879,Fulham,£80k-£100k,14
+240,Bernd Leno,31.0,90000,9879,Fulham,£80k-£100k,14
+241,Alex Iwobi,27.0,80000,9879,Fulham,£50k-£80k,17
+242,Issa Diop,26.0,70000,9879,Fulham,£50k-£80k,17
+243,Adama Traoré,27.0,65000,9879,Fulham,£50k-£80k,17
+244,Timothy Castagne,27.0,65000,9879,Fulham,£50k-£80k,17
+245,Kenny Tete,27.0,50000,9879,Fulham,£10k-£50k,20
+246,Harrison Reed,28.0,50000,9879,Fulham,£10k-£50k,20
+247,Andreas Pereira,27.0,50000,9879,Fulham,£10k-£50k,20
+248,Antonee Robinson,25.0,50000,9879,Fulham,£10k-£50k,20
+249,Calvin Bassey,23.0,45000,9879,Fulham,£10k-£50k,20
+250,Tosin Adarabioyo,25.0,40000,9879,Fulham,£10k-£50k,20
+251,Bobby Reid,30.0,35000,9879,Fulham,£10k-£50k,20
+252,Harry Wilson,26.0,35000,9879,Fulham,£10k-£50k,20
+253,Tom Cairney,32.0,30000,9879,Fulham,£10k-£50k,20
+254,Tim Ream,35.0,30000,9879,Fulham,£10k-£50k,20
+255,Rodrigo Muniz,22.0,7500,9879,Fulham,<£10k,17
+256,Tyrese Francois,23.0,7000,9879,Fulham,<£10k,17
+257,Justin Kluivert,24.0,80000,8678,Bournemouth,£50k-£80k,17
+258,Luis Sinisterra,24.0,65000,8678,Bournemouth,£50k-£80k,17
+259,Tyler Adams,24.0,60000,8678,Bournemouth,£50k-£80k,17
+260,David Brooks,26.0,50000,8678,Bournemouth,£10k-£50k,20
+261,Dominic Solanke,25.0,50000,8678,Bournemouth,£10k-£50k,20
+262,Ryan Christie,28.0,50000,8678,Bournemouth,£10k-£50k,20
+263,Neto,34.0,50000,8678,Bournemouth,£10k-£50k,20
+264,Marcos Senesi,26.0,50000,8678,Bournemouth,£10k-£50k,20
+265,Philip Billing,27.0,45000,8678,Bournemouth,£10k-£50k,20
+266,Lewis Cook,26.0,40000,8678,Bournemouth,£10k-£50k,20
+267,Alex Scott,19.0,40000,8678,Bournemouth,£10k-£50k,20
+268,Adam Smith,32.0,35000,8678,Bournemouth,£10k-£50k,20
+269,Dango Ouattara,21.0,35000,8678,Bournemouth,£10k-£50k,20
+270,Ryan Fredericks,30.0,35000,8678,Bournemouth,£10k-£50k,20
+271,Max Aarons,23.0,35000,8678,Bournemouth,£10k-£50k,20
+272,Marcus Tavernier,24.0,35000,8678,Bournemouth,£10k-£50k,20
+273,Chris Mepham,25.0,35000,8678,Bournemouth,£10k-£50k,20
+274,Lloyd Kelly,24.0,30000,8678,Bournemouth,£10k-£50k,20
+275,Milos Kerkez,19.0,30000,8678,Bournemouth,£10k-£50k,20
+276,Darren Randolph,36.0,25000,8678,Bournemouth,£10k-£50k,20
+277,Antoine Semenyo,23.0,20000,8678,Bournemouth,£10k-£50k,20
+278,Kieffer Moore,30.0,15000,8678,Bournemouth,£10k-£50k,20
+279,Gavin Kilkenny,23.0,1500,8678,Bournemouth,<£10k,17
+280,Josh Brownhill,27.0,45000,8191,Burnley,£10k-£50k,20
+281,Jack Cork,34.0,45000,8191,Burnley,£10k-£50k,20
+282,Jay Rodriguez,34.0,40000,8191,Burnley,£10k-£50k,20
+283,Sander Berge,25.0,40000,8191,Burnley,£10k-£50k,20
+284,Josh Cullen,27.0,40000,8191,Burnley,£10k-£50k,20
+285,Nathan Redmond,29.0,35000,8191,Burnley,£10k-£50k,20
+286,Jacob Bruun Larsen,24.0,35000,8191,Burnley,£10k-£50k,20
+287,Lyle Foster,22.0,32500,8191,Burnley,£10k-£50k,20
+288,Charlie Taylor,29.0,30000,8191,Burnley,£10k-£50k,20
+289,Zeki Amdouni,22.0,30000,8191,Burnley,£10k-£50k,20
+290,Connor Roberts,27.0,30000,8191,Burnley,£10k-£50k,20
+291,Aaron Ramsey,20.0,25000,8191,Burnley,£10k-£50k,20
+292,Vitinho,24.0,25000,8191,Burnley,£10k-£50k,20
+293,Arijanet Muric,24.0,25000,8191,Burnley,£10k-£50k,20
+294,James Trafford,20.0,25000,8191,Burnley,£10k-£50k,20
+295,Dara O'Shea,24.0,20000,8191,Burnley,£10k-£50k,20
+296,Hjalmar Ekdal,24.0,20000,8191,Burnley,£10k-£50k,20
+297,Anass Zaroury,22.0,15000,8191,Burnley,£10k-£50k,20
+298,Hannes Delcroix,24.0,15000,8191,Burnley,£10k-£50k,20
+299,Han-Noah Massengo,22.0,15000,8191,Burnley,£10k-£50k,20
+300,Luca Koleosho,18.0,10000,8191,Burnley,<£10k,17
+301,Wilson Odobert,18.0,10000,8191,Burnley,<£10k,17
+302,Lawrence Vigouroux,29.0,7000,8191,Burnley,<£10k,17
+303,Jordan Beyer,23.0,3000,8191,Burnley,<£10k,17
+304,Albert Sambi Lokonga,23.0,50000,8346,Luton Town,£10k-£50k,20
+305,Tahith Chong,23.0,30000,8346,Luton Town,£10k-£50k,20
+306,Ross Barkley,29.0,30000,8346,Luton Town,£10k-£50k,20
+307,Marvelous Nakamba,29.0,30000,8346,Luton Town,£10k-£50k,20
+308,Jacob Brown,25.0,30000,8346,Luton Town,£10k-£50k,20
+309,Tim Krul,35.0,25000,8346,Luton Town,£10k-£50k,20
+310,Thomas Kaminski,30.0,25000,8346,Luton Town,£10k-£50k,20
+311,Tom Lockyer,28.0,20000,8346,Luton Town,£10k-£50k,20
+312,Issa Kaboré,22.0,20000,8346,Luton Town,£10k-£50k,20
+313,Cauley Woodrow,28.0,20000,8346,Luton Town,£10k-£50k,20
+314,Mads Juel Andersen,25.0,15000,8346,Luton Town,£10k-£50k,20
+315,Chiedozie Ogbene,26.0,15000,8346,Luton Town,£10k-£50k,20
+316,Elijah Adebayo,25.0,12500,8346,Luton Town,£10k-£50k,20
+317,Andros Townsend,32.0,12500,8346,Luton Town,£10k-£50k,20
+318,Reece Burke,26.0,12500,8346,Luton Town,£10k-£50k,20
+319,Gabriel Osho,24.0,10000,8346,Luton Town,<£10k,17
+320,Amari'i Bell,29.0,10000,8346,Luton Town,<£10k,17
+321,Teden Mengi,21.0,10000,8346,Luton Town,<£10k,17
+322,Carlton Morris,27.0,10000,8346,Luton Town,<£10k,17
+323,Luke Berry,31.0,10000,8346,Luton Town,<£10k,17
+324,James Shea,32.0,7500,8346,Luton Town,<£10k,17
+325,Alfie Doughty,23.0,7500,8346,Luton Town,<£10k,17
+326,Jordan Clark,29.0,5000,8346,Luton Town,<£10k,17
+327,Pablo Sarabia,31.0,90000,8602,Wolves,£80k-£100k,14
+328,Nélson Semedo,29.0,80000,8602,Wolves,£50k-£80k,17
+329,Matheus Cunha,24.0,60000,8602,Wolves,£50k-£80k,17
+330,Pedro Neto,23.0,50000,8602,Wolves,£10k-£50k,20
+331,Matt Doherty,31.0,50000,8602,Wolves,£10k-£50k,20
+332,Max Kilman,26.0,50000,8602,Wolves,£10k-£50k,20
+333,Mario Lemina,29.0,45000,8602,Wolves,£10k-£50k,20
+334,Craig Dawson,33.0,45000,8602,Wolves,£10k-£50k,20
+335,José Sá,30.0,40000,8602,Wolves,£10k-£50k,20
+336,Jean-Ricner Bellegarde,25.0,35000,8602,Wolves,£10k-£50k,20
+337,Santiago Bueno,24.0,30000,8602,Wolves,£10k-£50k,20
+338,Hugo Bueno,21.0,10000,8602,Wolves,<£10k,17
+339,Daniel Bentley,30.0,10000,8602,Wolves,<£10k,17
+340,Toti Gomes,24.0,10000,8602,Wolves,<£10k,17
+341,Joe Hodge,20.0,5000,8602,Wolves,<£10k,17
+342,Tom King,28.0,5000,8602,Wolves,<£10k,17
+343,Divock Origi,28.0,120000,10203,Nott'ham Forest,£100k-£150k,11
+344,Callum Hudson-Odoi,22.0,80000,10203,Nott'ham Forest,£50k-£80k,17
+345,Chris Wood,31.0,80000,10203,Nott'ham Forest,£50k-£80k,17
+346,Morgan Gibbs-White,23.0,80000,10203,Nott'ham Forest,£50k-£80k,17
+347,Felipe,34.0,80000,10203,Nott'ham Forest,£50k-£80k,17
+348,Ibrahim Sangaré,25.0,75000,10203,Nott'ham Forest,£50k-£80k,17
+349,Taiwo Awoniyi,25.0,50000,10203,Nott'ham Forest,£10k-£50k,20
+350,Serge Aurier,30.0,50000,10203,Nott'ham Forest,£10k-£50k,20
+351,Neco Williams,22.0,50000,10203,Nott'ham Forest,£10k-£50k,20
+352,Joe Worrall,26.0,50000,10203,Nott'ham Forest,£10k-£50k,20
+353,Odisseas Vlachodimos,29.0,45000,10203,Nott'ham Forest,£10k-£50k,20
+354,Cheikhou Kouyaté,33.0,45000,10203,Nott'ham Forest,£10k-£50k,20
+355,Willy Boly,32.0,40000,10203,Nott'ham Forest,£10k-£50k,20
+356,Ola Aina,26.0,40000,10203,Nott'ham Forest,£10k-£50k,20
+357,Matt Turner,29.0,40000,10203,Nott'ham Forest,£10k-£50k,20
+358,Andrew Omobamidele,21.0,35000,10203,Nott'ham Forest,£10k-£50k,20
+359,Danilo,22.0,30000,10203,Nott'ham Forest,£10k-£50k,20
+360,Orel Mangala,25.0,30000,10203,Nott'ham Forest,£10k-£50k,20
+361,Murillo,21.0,30000,10203,Nott'ham Forest,£10k-£50k,20
+362,Nuno Tavares,23.0,30000,10203,Nott'ham Forest,£10k-£50k,20
+363,Ryan Yates,25.0,25000,10203,Nott'ham Forest,£10k-£50k,20
+364,Gonzalo Montiel,26.0,25000,10203,Nott'ham Forest,£10k-£50k,20
+365,Anthony Elanga,21.0,25000,10203,Nott'ham Forest,£10k-£50k,20
+366,Scott McKenna,26.0,20000,10203,Nott'ham Forest,£10k-£50k,20
+367,Harry Arter,33.0,20000,10203,Nott'ham Forest,£10k-£50k,20
+368,Ethan Horvath,28.0,17115,10203,Nott'ham Forest,£10k-£50k,20
+369,Harry Toffolo,27.0,15000,10203,Nott'ham Forest,£10k-£50k,20
+370,Wayne Hennessey,36.0,15000,10203,Nott'ham Forest,£10k-£50k,20
+371,Brandon Aguilera,20.0,10000,10203,Nott'ham Forest,<£10k,17
+372,Abdoulaye Doucouré,30.0,130000,8668,Everton,£100k-£150k,11
+373,Jordan Pickford,29.0,125000,8668,Everton,£100k-£150k,11
+374,André Gomes,30.0,112308,8668,Everton,£100k-£150k,11
+375,Amadou Onana,21.0,100000,8668,Everton,£80k-£100k,14
+376,James Tarkowski,30.0,100000,8668,Everton,£80k-£100k,14
+377,Dominic Calvert-Lewin,26.0,100000,8668,Everton,£80k-£100k,14
+378,Dele Alli,27.0,100000,8668,Everton,£80k-£100k,14
+379,Jack Harrison,26.0,90000,8668,Everton,£80k-£100k,14
+380,Idrissa Gana Gueye,33.0,80000,8668,Everton,£50k-£80k,17
+381,Michael Keane,30.0,80000,8668,Everton,£50k-£80k,17
+382,Ben Godfrey,25.0,75000,8668,Everton,£50k-£80k,17
+383,Beto,25.0,50000,8668,Everton,£10k-£50k,20
+384,Ashley Young,38.0,40000,8668,Everton,£10k-£50k,20
+385,Jarrad Branthwaite,21.0,35000,8668,Everton,£10k-£50k,20
+386,James Garner,22.0,30000,8668,Everton,£10k-£50k,20
+387,Youssef Chermiti,19.0,30000,8668,Everton,£10k-£50k,20
+388,Nathan Patterson,21.0,28000,8668,Everton,£10k-£50k,20
+389,Dwight McNeil,23.0,25000,8668,Everton,£10k-£50k,20
+390,Lewis Dobbin,20.0,8000,8668,Everton,<£10k,17
+391,Andy Lonergan,39.0,7500,8668,Everton,<£10k,17
+392,Ben Mee,33.0,55000,9937,Brentford,£50k-£80k,17
+393,Neal Maupay,26.0,50000,9937,Brentford,£10k-£50k,20
+394,Mathias Jensen,27.0,50000,9937,Brentford,£10k-£50k,20
+395,Bryan Mbeumo,23.0,45000,9937,Brentford,£10k-£50k,20
+396,Frank Onyeka,25.0,40000,9937,Brentford,£10k-£50k,20
+397,Kristoffer Ajer,25.0,40000,9937,Brentford,£10k-£50k,20
+398,Christian Nørgaard,29.0,35000,9937,Brentford,£10k-£50k,20
+399,Rico Henry,26.0,35000,9937,Brentford,£10k-£50k,20
+400,Keane Lewis-Potter,22.0,35000,9937,Brentford,£10k-£50k,20
+401,Mark Flekken,30.0,30000,9937,Brentford,£10k-£50k,20
+402,Vitaly Janelt,25.0,30000,9937,Brentford,£10k-£50k,20
+403,Nathan Collins,22.0,30000,9937,Brentford,£10k-£50k,20
+404,Mikkel Damsgaard,23.0,30000,9937,Brentford,£10k-£50k,20
+405,Aaron Hickey,21.0,30000,9937,Brentford,£10k-£50k,20
+406,Ethan Pinnock,30.0,30000,9937,Brentford,£10k-£50k,20
+407,Thomas Strakosha,28.0,25000,9937,Brentford,£10k-£50k,20
+408,Yoane Wissa,26.0,25000,9937,Brentford,£10k-£50k,20
+409,Mathias Jørgensen,33.0,25000,9937,Brentford,£10k-£50k,20
+410,Ivan Toney,27.0,20000,9937,Brentford,£10k-£50k,20
+411,Mads Roerslev,24.0,20000,9937,Brentford,£10k-£50k,20
+412,Saman Ghoddos,29.0,15000,9937,Brentford,£10k-£50k,20
+413,Shandon Baptiste,25.0,15000,9937,Brentford,£10k-£50k,20
+414,Kevin Schade,21.0,10000,9937,Brentford,<£10k,17
+415,Ellery Balcombe,23.0,10000,9937,Brentford,<£10k,17
+416,Yegor Yarmolyuk,19.0,5000,9937,Brentford,<£10k,17
